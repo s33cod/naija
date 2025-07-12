@@ -195,6 +195,18 @@ const App = () => (
           />
           <Route path="/professionals" element={<ProfessionalsPage />} />
           <Route
+            path="/industry"
+            element={
+              <RouteWithSEO
+                title="Industry Hub - NaijaPro Connect"
+                description="Explore all Nigerian industries and connect with professional leaders across Banking, Oil & Gas, Entertainment, Technology, and more."
+                keywords="Nigerian industries, professional sectors, industry hub, business sectors Nigeria, professional networking"
+              >
+                <IndustryHub />
+              </RouteWithSEO>
+            }
+          />
+          <Route
             path="/industry/banking-finance"
             element={
               <RouteWithSEO
