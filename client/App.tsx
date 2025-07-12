@@ -8,6 +8,9 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
 import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
+import BankingFinance from "./pages/BankingFinance";
+import OilGas from "./pages/OilGas";
+import Entertainment from "./pages/Entertainment";
 
 const queryClient = new QueryClient();
 
@@ -190,6 +193,42 @@ const App = () => (
             }
           />
           <Route path="/professionals" element={<ProfessionalsPage />} />
+          <Route
+            path="/industry/banking-finance"
+            element={
+              <RouteWithSEO
+                title="Banking & Finance Professionals - NaijaPro Connect"
+                description="Connect with Nigeria's top banking and finance professionals including Tony Elumelu, Ngozi Okonjo-Iweala, and other industry leaders."
+                keywords="Nigerian banking, finance professionals, Tony Elumelu, banking mentors, financial services Nigeria"
+              >
+                <BankingFinance />
+              </RouteWithSEO>
+            }
+          />
+          <Route
+            path="/industry/oil-gas"
+            element={
+              <RouteWithSEO
+                title="Oil & Gas Professionals - NaijaPro Connect"
+                description="Connect with Nigeria's energy sector leaders including Aliko Dangote and other oil & gas industry experts."
+                keywords="Nigerian oil gas, energy professionals, Aliko Dangote, petroleum industry, energy mentors"
+              >
+                <OilGas />
+              </RouteWithSEO>
+            }
+          />
+          <Route
+            path="/industry/entertainment"
+            element={
+              <RouteWithSEO
+                title="Entertainment Industry Professionals - NaijaPro Connect"
+                description="Connect with Nigeria's entertainment leaders including Davido, Genevieve Nnaji, Mo Abudu and other creative industry experts."
+                keywords="Nigerian entertainment, Nollywood, Afrobeats, Davido, Genevieve Nnaji, Mo Abudu, creative industry"
+              >
+                <Entertainment />
+              </RouteWithSEO>
+            }
+          />
           <Route path="/news" element={<NewsPage />} />
           <Route path="/community" element={<CommunityPage />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
