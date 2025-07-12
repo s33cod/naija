@@ -236,6 +236,7 @@ export default function Index() {
             </nav>
             <div className="flex items-center space-x-4">
               <Button variant="outline">Sign In</Button>
+              <WalletConnectionButton />
               <Button className="bg-naija-green hover:bg-naija-green-dark">
                 Join Network
               </Button>
