@@ -176,7 +176,7 @@ export default function Index() {
           <div className="flex justify-between items-center h-16">
             <div className="flex items-center space-x-4">
               <div className="flex items-center space-x-2">
-                <div className="w-8 h-8 bg-gradient-to-r from-nigerian-red to-nigerian-yellow rounded-full"></div>
+                <div className="w-8 h-8 bg-gradient-to-r from-naija-green to-naija-green-light rounded-full"></div>
                 <span className="text-xl font-bold text-gray-900">
                   NaijaPro Connect
                 </span>
@@ -289,7 +289,7 @@ export default function Index() {
               🏭 Filter by Industry
             </Badge>
             <Badge variant="secondary" className="text-sm px-4 py-2">
-              📍 Find by Location
+              ���� Find by Location
             </Badge>
             <Badge variant="secondary" className="text-sm px-4 py-2">
               🌐 Connect via Social
