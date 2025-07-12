@@ -72,7 +72,7 @@ const industries = [
   {
     id: "construction",
     name: "Construction",
-    icon: "��️",
+    icon: "🏗️",
     path: "/industry/construction",
   },
   {
@@ -208,20 +208,23 @@ export default function Index() {
               </div>
             </div>
             <nav className="hidden md:flex space-x-8">
-              <a href="#" className="text-gray-900 hover:text-primary">
+              <a href="/" className="text-gray-900 hover:text-primary">
                 Home
               </a>
-              <a href="#" className="text-gray-600 hover:text-primary">
+              <a
+                href="/professionals"
+                className="text-gray-600 hover:text-primary"
+              >
                 Professionals
               </a>
-              <a href="#" className="text-gray-600 hover:text-primary">
+              <a href="/industry" className="text-gray-600 hover:text-primary">
+                Industries
+              </a>
+              <a href="/news" className="text-gray-600 hover:text-primary">
                 News
               </a>
-              <a href="#" className="text-gray-600 hover:text-primary">
+              <a href="/community" className="text-gray-600 hover:text-primary">
                 Community
-              </a>
-              <a href="#" className="text-gray-600 hover:text-primary">
-                About
               </a>
             </nav>
             <div className="flex items-center space-x-4">
