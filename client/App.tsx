@@ -12,6 +12,8 @@ import BankingFinance from "./pages/BankingFinance";
 import OilGas from "./pages/OilGas";
 import Entertainment from "./pages/Entertainment";
 import IndustryHub from "./pages/IndustryHub";
+import BlockchainNetwork from "./pages/BlockchainNetwork";
+import { WalletProvider } from "./components/blockchain/WalletAuth";
 
 const queryClient = new QueryClient();
 
