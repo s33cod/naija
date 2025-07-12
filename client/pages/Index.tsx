@@ -220,6 +220,12 @@ export default function Index() {
               <a href="/industry" className="text-gray-600 hover:text-primary">
                 Industries
               </a>
+              <a
+                href="/blockchain"
+                className="text-gray-600 hover:text-primary"
+              >
+                Blockchain
+              </a>
               <a href="/news" className="text-gray-600 hover:text-primary">
                 News
               </a>
