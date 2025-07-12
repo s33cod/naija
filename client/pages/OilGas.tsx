@@ -123,6 +123,12 @@ export default function OilGas() {
               >
                 Professionals
               </a>
+              <a
+                href="/industry"
+                className="text-gray-900 hover:text-primary font-medium"
+              >
+                Industries
+              </a>
               <a href="/news" className="text-gray-600 hover:text-primary">
                 News
               </a>
