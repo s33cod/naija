@@ -11,6 +11,7 @@ import NotFound from "./pages/NotFound";
 import BankingFinance from "./pages/BankingFinance";
 import OilGas from "./pages/OilGas";
 import Entertainment from "./pages/Entertainment";
+import IndustryHub from "./pages/IndustryHub";
 
 const queryClient = new QueryClient();
 
