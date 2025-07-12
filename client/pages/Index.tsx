@@ -152,7 +152,8 @@ const professionals = {
       title: "President, Dangote Group",
       industry: "Oil & Gas",
       location: "Lagos, Nigeria",
-      image: "/api/placeholder/300/300",
+      image:
+        "https://pbs.twimg.com/profile_images/1153616477684973569/x7wEPOEL_400x400.jpg",
       verified: true,
       connections: "5M+",
       expertise: ["Oil & Gas", "Manufacturing", "Infrastructure"],
