@@ -57,6 +57,14 @@ export default {
           border: "hsl(var(--sidebar-border))",
           ring: "hsl(var(--sidebar-ring))",
         },
+        nigerian: {
+          red: "hsl(12, 88%, 55%)",
+          yellow: "hsl(45, 93%, 65%)",
+          green: "hsl(120, 60%, 40%)",
+          "red-dark": "hsl(12, 88%, 45%)",
+          "yellow-dark": "hsl(45, 93%, 55%)",
+          "green-dark": "hsl(120, 60%, 30%)",
+        },
       },
       borderRadius: {
         lg: "var(--radius)",
