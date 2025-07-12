@@ -92,7 +92,8 @@ const professionals = {
       title: "Chairman, UBA Group",
       industry: "Banking & Finance",
       location: "Lagos, Nigeria",
-      image: "/api/placeholder/300/300",
+      image:
+        "https://pbs.twimg.com/profile_images/1604081652468523008/SzQFJOL0_400x400.jpg",
       verified: true,
       connections: "10M+",
       expertise: ["Investment Banking", "Entrepreneurship", "Philanthropy"],
