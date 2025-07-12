@@ -120,7 +120,8 @@ const professionals = {
       title: "International Music Artist",
       industry: "Entertainment",
       location: "Lagos, Nigeria",
-      image: "/api/placeholder/300/300",
+      image:
+        "https://pbs.twimg.com/profile_images/1735413305191063552/fKYHAaYX_400x400.jpg",
       verified: true,
       connections: "30M+",
       expertise: ["Music Production", "Entertainment", "Brand Management"],
