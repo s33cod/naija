@@ -201,7 +201,7 @@ export default function Index() {
             </nav>
             <div className="flex items-center space-x-4">
               <Button variant="outline">Sign In</Button>
-              <Button className="bg-nigerian-red hover:bg-nigerian-red-dark">
+              <Button className="bg-naija-green hover:bg-naija-green-dark">
                 Join Network
               </Button>
             </div>
@@ -289,7 +289,7 @@ export default function Index() {
               🏭 Filter by Industry
             </Badge>
             <Badge variant="secondary" className="text-sm px-4 py-2">
-              ���� Find by Location
+              📍 Find by Location
             </Badge>
             <Badge variant="secondary" className="text-sm px-4 py-2">
               🌐 Connect via Social
