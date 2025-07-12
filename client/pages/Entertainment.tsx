@@ -26,7 +26,8 @@ const mentors = [
     title: "International Music Artist & CEO, DMW",
     industry: "Entertainment",
     location: "Lagos, Nigeria",
-    image: "/api/placeholder/300/300",
+    image:
+      "https://pbs.twimg.com/profile_images/1735413305191063552/fKYHAaYX_400x400.jpg",
     verified: true,
     connections: "30M+",
     expertise: [
@@ -47,7 +48,8 @@ const mentors = [
     title: "Actress, Producer & Director",
     industry: "Entertainment",
     location: "Lagos, Nigeria",
-    image: "/api/placeholder/300/300",
+    image:
+      "https://pbs.twimg.com/profile_images/1598020636076089344/rCYuJ7w__400x400.jpg",
     verified: true,
     connections: "15M+",
     expertise: ["Film Production", "Acting", "Directing", "Content Creation"],
@@ -59,11 +61,12 @@ const mentors = [
   },
   {
     id: 3,
-    name: "Ebonylife CEO",
-    title: "Mo Abudu",
+    name: "Mo Abudu",
+    title: "CEO, EbonyLife Media",
     industry: "Entertainment",
     location: "Lagos, Nigeria",
-    image: "/api/placeholder/300/300",
+    image:
+      "https://pbs.twimg.com/profile_images/1654522062654177282/6O9oPdTz_400x400.jpg",
     verified: true,
     connections: "5M+",
     expertise: [
