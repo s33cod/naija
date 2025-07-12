@@ -34,7 +34,8 @@ const mentors = [
     title: "Chairman & CEO, UBA Group",
     industry: "Banking & Finance",
     location: "Lagos, Nigeria",
-    image: "/api/placeholder/300/300",
+    image:
+      "https://pbs.twimg.com/profile_images/1604081652468523008/SzQFJOL0_400x400.jpg",
     verified: true,
     connections: "10M+",
     expertise: [
@@ -55,7 +56,8 @@ const mentors = [
     title: "Director-General, WTO",
     industry: "Banking & Finance",
     location: "Geneva, Switzerland",
-    image: "/api/placeholder/300/300",
+    image:
+      "https://pbs.twimg.com/profile_images/1357323048636436481/LkQfKEtv_400x400.jpg",
     verified: true,
     connections: "2M+",
     expertise: [
@@ -76,7 +78,8 @@ const mentors = [
     title: "Former CEO, Access Bank",
     industry: "Banking & Finance",
     location: "Lagos, Nigeria",
-    image: "/api/placeholder/300/300",
+    image:
+      "https://pbs.twimg.com/profile_images/1354425999582773249/DJyHKcMD_400x400.jpg",
     verified: true,
     connections: "1.5M+",
     expertise: [
@@ -263,7 +266,7 @@ export default function BankingFinance() {
                         className="text-xs"
                       >
                         {mentor.type === "entrepreneur"
-                          ? "��� Entrepreneur"
+                          ? "💼 Entrepreneur"
                           : "🎓 Scholar"}
                       </Badge>
                       <div className="flex items-center gap-1">
