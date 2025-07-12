@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Button } from "@/components/ui/button";
+import { WalletConnectionButton } from "@/components/blockchain/WalletAuth";
 import {
   Card,
   CardContent,
