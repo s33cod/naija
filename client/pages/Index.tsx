@@ -218,7 +218,7 @@ export default function Index() {
           {showreelImages.map((image, index) => (
             <div
               key={image.id}
-              className="w-full h-full flex-shrink-0 relative bg-gradient-to-r from-nigerian-red via-nigerian-yellow to-nigerian-green"
+              className="w-full h-full flex-shrink-0 relative bg-gradient-to-r from-naija-green via-naija-green-light to-naija-white"
             >
               <div className="absolute inset-0 bg-black bg-opacity-40"></div>
               <div className="relative z-10 h-full flex items-center justify-center text-center text-white px-4">
