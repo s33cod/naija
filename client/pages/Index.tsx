@@ -49,13 +49,38 @@ const showreelImages = [
 ];
 
 const industries = [
-  { id: "all", name: "All Industries", icon: "🏢" },
-  { id: "banking", name: "Banking & Finance", icon: "🏦" },
-  { id: "oil-gas", name: "Oil & Gas", icon: "⛽" },
-  { id: "technology", name: "Technology", icon: "💻" },
-  { id: "entertainment", name: "Entertainment", icon: "🎭" },
-  { id: "construction", name: "Construction", icon: "🏗️" },
-  { id: "education", name: "Education", icon: "📚" },
+  { id: "all", name: "All Industries", icon: "🏢", path: "/" },
+  {
+    id: "banking",
+    name: "Banking & Finance",
+    icon: "🏦",
+    path: "/industry/banking-finance",
+  },
+  { id: "oil-gas", name: "Oil & Gas", icon: "⛽", path: "/industry/oil-gas" },
+  {
+    id: "technology",
+    name: "Technology",
+    icon: "💻",
+    path: "/industry/technology",
+  },
+  {
+    id: "entertainment",
+    name: "Entertainment",
+    icon: "🎭",
+    path: "/industry/entertainment",
+  },
+  {
+    id: "construction",
+    name: "Construction",
+    icon: "��️",
+    path: "/industry/construction",
+  },
+  {
+    id: "education",
+    name: "Education",
+    icon: "📚",
+    path: "/industry/education",
+  },
 ];
 
 const professionals = {
@@ -307,18 +332,23 @@ export default function Index() {
             onValueChange={setActiveIndustry}
             className="w-full"
           >
-            <TabsList className="grid w-full grid-cols-4 lg:grid-cols-7 mb-8">
+            <div className="grid w-full grid-cols-4 lg:grid-cols-7 gap-2 mb-8">
               {industries.map((industry) => (
-                <TabsTrigger
+                <a
                   key={industry.id}
-                  value={industry.id}
-                  className="text-xs sm:text-sm flex items-center gap-1"
+                  href={industry.path}
+                  className={`inline-flex items-center justify-center gap-1 px-3 py-2 text-xs sm:text-sm font-medium rounded-md transition-colors
+                    ${
+                      activeIndustry === industry.id
+                        ? "bg-naija-green text-white"
+                        : "bg-gray-100 text-gray-900 hover:bg-gray-200"
+                    }`}
                 >
                   <span>{industry.icon}</span>
                   <span className="hidden sm:inline">{industry.name}</span>
-                </TabsTrigger>
+                </a>
               ))}
-            </TabsList>
+            </div>
 
             <TabsContent value={activeIndustry} className="mt-0">
               {currentProfessionals.length > 0 ? (
