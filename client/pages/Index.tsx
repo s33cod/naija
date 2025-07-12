@@ -231,7 +231,7 @@ export default function Index() {
                   </p>
                   <Button
                     size="lg"
-                    className="bg-white text-nigerian-red hover:bg-gray-100"
+                    className="bg-white text-naija-green hover:bg-gray-100"
                   >
                     Get Started
                   </Button>
@@ -386,7 +386,7 @@ export default function Index() {
                           <div className="flex gap-2 pt-2">
                             <Dialog>
                               <DialogTrigger asChild>
-                                <Button className="flex-1 bg-nigerian-red hover:bg-nigerian-red-dark">
+                                <Button className="flex-1 bg-naija-green hover:bg-naija-green-dark">
                                   Connect
                                 </Button>
                               </DialogTrigger>
@@ -401,7 +401,7 @@ export default function Index() {
                                   </DialogDescription>
                                 </DialogHeader>
                                 <div className="space-y-4 pt-4">
-                                  <Button className="w-full bg-nigerian-red hover:bg-nigerian-red-dark">
+                                  <Button className="w-full bg-naija-green hover:bg-naija-green-dark">
                                     Sign in with Google
                                   </Button>
                                   <Button variant="outline" className="w-full">
@@ -439,7 +439,7 @@ export default function Index() {
         </section>
 
         {/* Call to Action */}
-        <section className="bg-gradient-to-r from-nigerian-red to-nigerian-yellow rounded-lg p-8 text-center text-white">
+        <section className="bg-gradient-to-r from-naija-green to-naija-green-light rounded-lg p-8 text-center text-white">
           <h3 className="text-2xl md:text-3xl font-bold mb-4">
             Join Nigeria's Premier Professional Network
           </h3>
@@ -449,7 +449,7 @@ export default function Index() {
           </p>
           <Button
             size="lg"
-            className="bg-white text-nigerian-red hover:bg-gray-100"
+            className="bg-white text-naija-green hover:bg-gray-100"
           >
             Get Started Today
           </Button>
@@ -462,7 +462,7 @@ export default function Index() {
           <div className="grid md:grid-cols-4 gap-8">
             <div>
               <div className="flex items-center space-x-2 mb-4">
-                <div className="w-8 h-8 bg-gradient-to-r from-nigerian-red to-nigerian-yellow rounded-full"></div>
+                <div className="w-8 h-8 bg-gradient-to-r from-naija-green to-naija-green-light rounded-full"></div>
                 <span className="text-xl font-bold">NaijaPro Connect</span>
               </div>
               <p className="text-gray-400">
@@ -555,7 +555,7 @@ export default function Index() {
       <div className="fixed bottom-6 right-6">
         <Button
           size="lg"
-          className="rounded-full w-14 h-14 bg-nigerian-green hover:bg-nigerian-green-dark shadow-lg"
+          className="rounded-full w-14 h-14 bg-naija-green hover:bg-naija-green-dark shadow-lg"
         >
           <MessageCircle className="w-6 h-6" />
         </Button>
