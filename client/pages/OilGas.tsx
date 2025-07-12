@@ -26,7 +26,8 @@ const mentors = [
     title: "President & CEO, Dangote Group",
     industry: "Oil & Gas",
     location: "Lagos, Nigeria",
-    image: "/api/placeholder/300/300",
+    image:
+      "https://pbs.twimg.com/profile_images/1153616477684973569/x7wEPOEL_400x400.jpg",
     verified: true,
     connections: "5M+",
     expertise: [
@@ -47,7 +48,8 @@ const mentors = [
     title: "Former Minister of Petroleum",
     industry: "Oil & Gas",
     location: "Abuja, Nigeria",
-    image: "/api/placeholder/300/300",
+    image:
+      "https://pbs.twimg.com/profile_images/925711649777885184/SMQHP7xD_400x400.jpg",
     verified: true,
     connections: "800K+",
     expertise: [
@@ -64,11 +66,12 @@ const mentors = [
   },
   {
     id: 3,
-    name: "Seplat Energy CEO",
-    title: "Roger Brown",
+    name: "Roger Brown",
+    title: "CEO, Seplat Energy",
     industry: "Oil & Gas",
     location: "Lagos, Nigeria",
-    image: "/api/placeholder/300/300",
+    image:
+      "https://www.seplatenergy.com/wp-content/uploads/2019/08/Roger-Brown-1.jpg",
     verified: true,
     connections: "600K+",
     expertise: [
