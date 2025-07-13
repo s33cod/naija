@@ -53,7 +53,7 @@ const industries = [
   {
     id: "banking",
     name: "Banking & Finance",
-    icon: "🏦",
+    icon: "���",
     path: "/industry/banking-finance",
   },
   { id: "oil-gas", name: "Oil & Gas", icon: "⛽", path: "/industry/oil-gas" },
@@ -448,21 +448,114 @@ export default function Index() {
           </div>
         </section>
 
+        {/* Case Study Section */}
+        <section className="mb-16">
+          <div className="text-center mb-8">
+            <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">
+              Real Stories, Real Talents
+            </h3>
+            <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+              Discover how our platform connects professionals with their
+              creative passions, validated by community and AI discovery.
+            </p>
+          </div>
+
+          <Card className="border-2 border-purple-200 bg-gradient-to-r from-purple-50 to-pink-50 p-6">
+            <div className="grid md:grid-cols-2 gap-6 items-center">
+              <div>
+                <Badge className="bg-purple-100 text-purple-800 mb-4">
+                  🌟 Featured Mashup Profile
+                </Badge>
+                <h4 className="text-xl font-bold text-gray-900 mb-3">
+                  Meet Adunni: Digital UX Designer × Interior Decorator
+                </h4>
+                <p className="text-gray-700 mb-4">
+                  A Digital Product Designer by profession and an Interior
+                  Decorator by passion. Her creative skills are certified by her
+                  LinkedIn peers and visually confirmed via Instagram. Explore
+                  her mashup profile to see where art meets digital
+                  transformation—powered by community validation and AI
+                  discovery.
+                </p>
+                <div className="flex gap-2 mb-4">
+                  <Badge variant="outline">UX Design @ Paystack</Badge>
+                  <Badge variant="outline">Interior Design</Badge>
+                  <Badge variant="outline">Digital Art</Badge>
+                </div>
+                <div className="flex items-center gap-3">
+                  <span className="text-sm text-gray-600">Verified on:</span>
+                  <div className="flex gap-2">
+                    <Badge className="bg-blue-100 text-blue-800">
+                      🔗 LinkedIn
+                    </Badge>
+                    <Badge className="bg-pink-100 text-pink-800">
+                      📸 Instagram
+                    </Badge>
+                    <Badge className="bg-green-100 text-green-800">
+                      💼 Portfolio
+                    </Badge>
+                  </div>
+                </div>
+              </div>
+              <div className="relative">
+                <div className="bg-white rounded-lg p-4 shadow-lg">
+                  <div className="flex items-center gap-3 mb-3">
+                    <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full flex items-center justify-center text-white font-bold">
+                      AS
+                    </div>
+                    <div>
+                      <h5 className="font-semibold">Adunni Soyinka</h5>
+                      <p className="text-sm text-gray-600">@creativedeco</p>
+                    </div>
+                    <Badge className="bg-purple-500 text-white text-xs">
+                      🌟 Gifted
+                    </Badge>
+                  </div>
+                  <div className="text-sm text-gray-700 mb-3">
+                    "Blending user experience design with interior aesthetics to
+                    create beautiful, functional spaces both digital and
+                    physical."
+                  </div>
+                  <div className="flex justify-between text-xs text-gray-500">
+                    <span>87% AI Match</span>
+                    <span>Lagos, Nigeria</span>
+                    <span>Available</span>
+                  </div>
+                </div>
+                <div className="absolute -top-2 -right-2 bg-yellow-400 text-yellow-900 px-2 py-1 rounded-full text-xs font-bold">
+                  AI Suggested
+                </div>
+              </div>
+            </div>
+          </Card>
+        </section>
+
         {/* Call to Action */}
         <section className="bg-gradient-to-r from-naija-green to-naija-green-light rounded-lg p-8 text-center text-white">
           <h3 className="text-2xl md:text-3xl font-bold mb-4">
-            Join Nigeria's Premier Professional Network
+            Ready to Discover Your Perfect Match?
           </h3>
           <p className="text-lg mb-6 opacity-90">
-            Connect, collaborate, and grow with verified professionals across
-            all industries.
+            Join thousands of professionals using AI-powered talent discovery to
+            connect, collaborate, and grow across Nigeria.
           </p>
-          <Button
-            size="lg"
-            className="bg-white text-naija-green hover:bg-gray-100"
-          >
-            Get Started Today
-          </Button>
+          <div className="flex justify-center gap-4">
+            <a href="/discovery">
+              <Button
+                size="lg"
+                className="bg-white text-naija-green hover:bg-gray-100"
+              >
+                🚀 Start Discovering
+              </Button>
+            </a>
+            <Button
+              size="lg"
+              variant="outline"
+              className="border-white text-white hover:bg-white hover:text-naija-green"
+            >
+              Create Your Profile
+            </Button>
+          </div>
         </section>
       </main>
 
