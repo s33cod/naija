@@ -134,8 +134,16 @@ export default function OilGas() {
         </div>
       </section>
 
-      {/* Search and Filter */}
+      {/* AI Search Widget */}
       <section className="py-8 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-8">
+          <AISearchWidget
+            industry="Oil & Gas"
+            placeholder="Search Oil & Gas professionals: 'Petroleum Engineer + Environmental Art' or 'Energy Consultant + Photography'"
+          />
+        </div>
+
+        {/* Search and Filter */}
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col md:flex-row gap-4 items-center">
             <div className="relative flex-1">
