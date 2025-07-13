@@ -550,7 +550,11 @@ export default function UserProfile() {
               </CardHeader>
               <CardContent>
                 <div className="flex flex-wrap gap-2">
-                  {professional.expertise.map((skill, index) => (
+                  {(
+                    professional.expertise ||
+                    professional.professionalSkills ||
+                    []
+                  ).map((skill, index) => (
                     <Badge key={index} variant="secondary" className="mb-1">
                       {skill}
                     </Badge>
@@ -759,6 +763,8 @@ export default function UserProfile() {
           </div>
         </div>
       </div>
+
+      <Footer />
     </div>
   );
 }
