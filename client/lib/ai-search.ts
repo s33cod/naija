@@ -349,6 +349,11 @@ export class TalentSearchEngine {
       this.matchesFilters(profile, filters),
     );
 
+    // If no exact matches found, provide fallback results
+    if (results.length === 0) {
+      results = this.getFallbackResults(filters);
+    }
+
     // Calculate relevance scores
     const scoredResults = results.map((profile) => ({
       profile,
