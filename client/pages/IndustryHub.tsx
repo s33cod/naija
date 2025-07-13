@@ -8,6 +8,9 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
+import Header from "@/components/layout/Header";
+import Footer from "@/components/layout/Footer";
+import SEOHead from "@/components/layout/SEOHead";
 import { ArrowRight, Users, TrendingUp } from "lucide-react";
 
 const industries = [
@@ -51,51 +54,48 @@ const industries = [
       "Tech entrepreneurs, software engineers, and digital innovators",
     mentorCount: 0,
     path: "/industry/technology",
-    featured: ["Coming Soon"],
-    color: "from-blue-500 to-cyan-500",
-  },
-  {
-    id: "construction",
-    name: "Construction",
-    icon: "🏗️",
-    description:
-      "Civil engineers, architects, and construction industry leaders",
-    mentorCount: 0,
-    path: "/industry/construction",
-    featured: ["Coming Soon"],
-    color: "from-orange-500 to-red-500",
-  },
-  {
-    id: "education",
-    name: "Education",
-    icon: "📚",
-    description: "Educators, researchers, and academic institution leaders",
-    mentorCount: 0,
-    path: "/industry/education",
-    featured: ["Coming Soon"],
-    color: "from-indigo-500 to-purple-500",
+    featured: [],
+    color: "from-cyan-500 to-cyan-600",
   },
   {
     id: "healthcare",
     name: "Healthcare",
     icon: "🏥",
-    description:
-      "Medical professionals, researchers, and healthcare innovators",
+    description: "Medical professionals, researchers, and health innovators",
     mentorCount: 0,
     path: "/industry/healthcare",
-    featured: ["Coming Soon"],
-    color: "from-red-500 to-pink-500",
+    featured: [],
+    color: "from-red-500 to-red-600",
   },
   {
     id: "agriculture",
     name: "Agriculture",
     icon: "🌾",
-    description:
-      "Agricultural experts, agtech innovators, and food industry leaders",
+    description: "Agricultural leaders, farmers, and agribusiness experts",
     mentorCount: 0,
     path: "/industry/agriculture",
-    featured: ["Coming Soon"],
-    color: "from-green-600 to-lime-500",
+    featured: [],
+    color: "from-yellow-500 to-yellow-600",
+  },
+  {
+    id: "education",
+    name: "Education",
+    icon: "📚",
+    description: "Educators, researchers, and academic leaders",
+    mentorCount: 0,
+    path: "/industry/education",
+    featured: [],
+    color: "from-indigo-500 to-indigo-600",
+  },
+  {
+    id: "construction",
+    name: "Construction",
+    icon: "🏗️",
+    description: "Construction leaders, architects, and infrastructure experts",
+    mentorCount: 0,
+    path: "/industry/construction",
+    featured: [],
+    color: "from-orange-500 to-orange-600",
   },
 ];
 
@@ -107,7 +107,7 @@ export default function IndustryHub() {
     (industry) => industry.mentorCount === 0,
   );
 
-    return (
+  return (
     <div className="min-h-screen bg-background">
       <SEOHead
         title="Nigerian Industries Hub - Explore Professional Sectors"
@@ -116,17 +116,12 @@ export default function IndustryHub() {
       />
 
       <Header />
-              </Button>
-            </div>
-          </div>
-        </div>
-      </header>
 
       {/* Hero Section */}
       <section className="bg-gradient-to-r from-naija-green to-naija-green-light text-white py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-4xl md:text-6xl font-bold mb-4">
-            🏢 Industry Hub
+            🏢 Nigerian Industries Hub
           </h1>
           <p className="text-xl md:text-2xl mb-8 opacity-90">
             Explore Nigeria's leading professionals across all industries
@@ -143,84 +138,103 @@ export default function IndustryHub() {
               className="text-lg px-6 py-2 bg-white text-naija-green"
             >
               {industries.reduce(
-                (total, industry) => total + industry.mentorCount,
+                (sum, industry) => sum + industry.mentorCount,
                 0,
               )}{" "}
-              Expert Mentors
+              Professionals
             </Badge>
           </div>
         </div>
       </section>
 
-      {/* Stats Section */}
-      <section className="py-12 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid md:grid-cols-3 gap-8 text-center">
-            <div className="flex flex-col items-center">
-              <div className="w-16 h-16 bg-naija-green rounded-full flex items-center justify-center mb-4">
-                <Users className="w-8 h-8 text-white" />
-              </div>
-              <h3 className="text-2xl font-bold text-gray-900">9</h3>
-              <p className="text-gray-600">Professional Mentors</p>
-            </div>
-            <div className="flex flex-col items-center">
-              <div className="w-16 h-16 bg-naija-green rounded-full flex items-center justify-center mb-4">
-                <TrendingUp className="w-8 h-8 text-white" />
-              </div>
-              <h3 className="text-2xl font-bold text-gray-900">8</h3>
-              <p className="text-gray-600">Industry Sectors</p>
-            </div>
-            <div className="flex flex-col items-center">
-              <div className="w-16 h-16 bg-naija-green rounded-full flex items-center justify-center mb-4">
-                <ArrowRight className="w-8 h-8 text-white" />
-              </div>
-              <h3 className="text-2xl font-bold text-gray-900">1500+</h3>
-              <p className="text-gray-600">Total Mentees</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Active Industries */}
       <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <section className="mb-16">
-          <h2 className="text-3xl font-bold text-gray-900 mb-2">
-            Active Industries
+        {/* Statistics */}
+        <section className="text-center mb-16">
+          <h2 className="text-3xl font-bold text-gray-900 mb-4">
+            Nigeria's Economic Powerhouse
           </h2>
-          <p className="text-gray-600 mb-8">
-            Connect with verified professionals in these thriving sectors
+          <p className="text-lg text-gray-600 max-w-3xl mx-auto mb-8">
+            Discover top talent across the sectors that drive Nigeria's economy.
+            Connect with industry leaders, experienced professionals, and rising
+            stars.
           </p>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-4 gap-8">
+            <div className="text-center">
+              <div className="text-3xl font-bold text-naija-green mb-2">
+                ₦206T
+              </div>
+              <div className="text-gray-600">GDP (2023)</div>
+            </div>
+            <div className="text-center">
+              <div className="text-3xl font-bold text-naija-green mb-2">
+                200M+
+              </div>
+              <div className="text-gray-600">Population</div>
+            </div>
+            <div className="text-center">
+              <div className="text-3xl font-bold text-naija-green mb-2">36</div>
+              <div className="text-gray-600">States</div>
+            </div>
+            <div className="text-center">
+              <div className="text-3xl font-bold text-naija-green mb-2">
+                25+
+              </div>
+              <div className="text-gray-600">Industry Sectors</div>
+            </div>
+          </div>
+        </section>
+
+        {/* Active Industries */}
+        <section className="mb-16">
+          <div className="flex items-center justify-between mb-8">
+            <div>
+              <h3 className="text-2xl font-bold text-gray-900 mb-2">
+                Active Industry Hubs
+              </h3>
+              <p className="text-gray-600">
+                Industries with verified professionals and mentors
+              </p>
+            </div>
+            <Button
+              variant="outline"
+              onClick={() => (window.location.href = "/discovery")}
+            >
+              🔍 Search All Talents
+            </Button>
+          </div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {activeIndustries.map((industry) => (
               <Card
                 key={industry.id}
-                className="overflow-hidden hover:shadow-xl transition-all duration-300 border-2 hover:border-naija-green group"
+                className="group hover:shadow-xl transition-all duration-300 border-2 hover:border-naija-green cursor-pointer"
+                onClick={() => (window.location.href = industry.path)}
               >
-                <CardHeader className="pb-4">
-                  <div
-                    className={`w-full h-32 bg-gradient-to-r ${industry.color} rounded-lg flex items-center justify-center mb-4`}
-                  >
-                    <span className="text-6xl">{industry.icon}</span>
-                  </div>
-                  <CardTitle className="text-xl flex items-center gap-2">
-                    {industry.name}
+                <CardHeader>
+                  <div className="flex items-start justify-between">
+                    <div>
+                      <div className="text-4xl mb-2">{industry.icon}</div>
+                      <CardTitle className="text-xl group-hover:text-naija-green transition-colors">
+                        {industry.name}
+                      </CardTitle>
+                    </div>
                     <Badge className="bg-naija-green">
-                      {industry.mentorCount} mentors
+                      {industry.mentorCount} Mentors
                     </Badge>
-                  </CardTitle>
-                  <CardDescription className="text-sm">
+                  </div>
+                  <CardDescription className="text-gray-600">
                     {industry.description}
                   </CardDescription>
                 </CardHeader>
                 <CardContent>
-                  <div className="space-y-4">
+                  <div className="space-y-3">
                     <div>
-                      <h4 className="font-medium text-sm text-gray-900 mb-2">
+                      <p className="text-sm font-medium text-gray-700 mb-2">
                         Featured Professionals:
-                      </h4>
+                      </p>
                       <div className="flex flex-wrap gap-1">
-                        {industry.featured.map((name, index) => (
+                        {industry.featured.slice(0, 2).map((name, index) => (
                           <Badge
                             key={index}
                             variant="outline"
@@ -229,14 +243,25 @@ export default function IndustryHub() {
                             {name}
                           </Badge>
                         ))}
+                        {industry.featured.length > 2 && (
+                          <Badge variant="outline" className="text-xs">
+                            +{industry.featured.length - 2} more
+                          </Badge>
+                        )}
                       </div>
                     </div>
-                    <a href={industry.path} className="block">
-                      <Button className="w-full bg-naija-green hover:bg-naija-green-dark group-hover:bg-naija-green-dark">
-                        Explore {industry.name}
-                        <ArrowRight className="w-4 h-4 ml-2" />
-                      </Button>
-                    </a>
+                    <div className="flex items-center justify-between pt-2">
+                      <div className="flex items-center text-sm text-gray-500">
+                        <Users className="w-4 h-4 mr-1" />
+                        Active professionals
+                      </div>
+                      <div className="flex items-center text-naija-green">
+                        <span className="text-sm font-medium mr-2">
+                          Explore
+                        </span>
+                        <ArrowRight className="w-4 h-4" />
+                      </div>
+                    </div>
                   </div>
                 </CardContent>
               </Card>
@@ -245,51 +270,68 @@ export default function IndustryHub() {
         </section>
 
         {/* Coming Soon Industries */}
-        <section>
-          <h2 className="text-3xl font-bold text-gray-900 mb-2">Coming Soon</h2>
-          <p className="text-gray-600 mb-8">
-            We're expanding to include more industries
-          </p>
+        <section className="mb-16">
+          <div className="text-center mb-8">
+            <h3 className="text-2xl font-bold text-gray-900 mb-2">
+              Coming Soon
+            </h3>
+            <p className="text-gray-600">
+              More industry hubs launching soon with verified professionals
+            </p>
+          </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
             {comingSoonIndustries.map((industry) => (
-              <Card key={industry.id} className="overflow-hidden opacity-75">
-                <CardHeader className="pb-4">
-                  <div
-                    className={`w-full h-24 bg-gradient-to-r ${industry.color} rounded-lg flex items-center justify-center mb-4 opacity-60`}
-                  >
-                    <span className="text-4xl">{industry.icon}</span>
-                  </div>
-                  <CardTitle className="text-lg">{industry.name}</CardTitle>
-                  <CardDescription className="text-sm">
+              <Card
+                key={industry.id}
+                className="opacity-75 hover:opacity-100 transition-opacity"
+              >
+                <CardContent className="p-6 text-center">
+                  <div className="text-3xl mb-3">{industry.icon}</div>
+                  <h4 className="font-semibold text-gray-900 mb-2">
+                    {industry.name}
+                  </h4>
+                  <p className="text-sm text-gray-600 mb-3">
                     {industry.description}
-                  </CardDescription>
-                </CardHeader>
-                <CardContent>
-                  <Button disabled className="w-full">
+                  </p>
+                  <Badge variant="outline" className="text-xs">
                     Coming Soon
-                  </Button>
+                  </Badge>
                 </CardContent>
               </Card>
             ))}
           </div>
         </section>
+
+        {/* Call to Action */}
+        <section className="bg-gradient-to-r from-naija-green to-naija-green-light rounded-lg p-8 text-center text-white">
+          <h3 className="text-2xl md:text-3xl font-bold mb-4">
+            Join Your Industry Community
+          </h3>
+          <p className="text-lg mb-6 opacity-90">
+            Connect with professionals in your field and discover new
+            opportunities across Nigeria's diverse economy.
+          </p>
+          <div className="flex justify-center gap-4">
+            <Button
+              size="lg"
+              className="bg-white text-naija-green hover:bg-gray-100"
+              onClick={() => (window.location.href = "/discovery")}
+            >
+              🔍 Find Professionals
+            </Button>
+            <Button
+              size="lg"
+              variant="outline"
+              className="border-white text-white hover:bg-white hover:text-naija-green"
+            >
+              Join as Professional
+            </Button>
+          </div>
+        </section>
       </main>
 
-      {/* Footer */}
-      <footer className="bg-gray-900 text-white py-12">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center">
-            <div className="flex items-center justify-center space-x-2 mb-4">
-              <div className="w-8 h-8 bg-gradient-to-r from-naija-green to-naija-green-light rounded-full"></div>
-              <span className="text-xl font-bold">NaijaPro Connect</span>
-            </div>
-            <p className="text-gray-400">
-              Industry Hub - Connecting Nigeria's Professional Excellence
-            </p>
-          </div>
-        </div>
-      </footer>
+      <Footer />
     </div>
   );
 }
