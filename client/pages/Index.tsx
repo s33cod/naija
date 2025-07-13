@@ -278,8 +278,8 @@ export default function Index() {
                     className="border-white text-white hover:bg-white hover:text-naija-green"
                   >
                     How It Works
-                  </Button>
-                                </div>
+                                    </Button>
+                </div>
               </div>
             </div>
           ))}
