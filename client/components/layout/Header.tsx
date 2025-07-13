@@ -28,7 +28,7 @@ const industries = [
   { name: "Agriculture", path: "/industry/agriculture", icon: "🌾" },
   { name: "Education", path: "/industry/education", icon: "📚" },
   { name: "Construction", path: "/industry/construction", icon: "🏗️" },
-  { name: "Manufacturing", path: "/industry/manufacturing", icon: "🏭" },
+  { name: "Manufacturing", path: "/industry/manufacturing", icon: "���" },
   { name: "Transportation", path: "/industry/transportation", icon: "🚛" },
 ];
 
@@ -36,6 +36,11 @@ export default function Header() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [authModalOpen, setAuthModalOpen] = useState(false);
   const [authMode, setAuthMode] = useState<"signin" | "join">("signin");
+  const [currentPath, setCurrentPath] = useState("");
+
+  useEffect(() => {
+    setCurrentPath(window.location.pathname);
+  }, []);
 
   const handleSignIn = () => {
     setAuthMode("signin");
@@ -46,6 +51,26 @@ export default function Header() {
     setAuthMode("join");
     setAuthModalOpen(true);
   };
+
+  const isActivePath = (path: string) => {
+    if (path === "/" && currentPath === "/") return true;
+    if (path !== "/" && currentPath.startsWith(path)) return true;
+    return false;
+  };
+
+  const navLinkClasses = (path: string) =>
+    `flex items-center gap-2 px-3 py-2 rounded-lg font-medium transition-all duration-200 ${
+      isActivePath(path)
+        ? "bg-naija-green text-white shadow-md"
+        : "text-gray-600 hover:text-naija-green hover:bg-naija-green/5"
+    }`;
+
+  const mobileNavLinkClasses = (path: string) =>
+    `flex items-center gap-3 px-4 py-3 rounded-lg font-medium transition-all duration-200 ${
+      isActivePath(path)
+        ? "bg-naija-green text-white shadow-md"
+        : "text-gray-600 hover:text-naija-green hover:bg-naija-green/5"
+    }`;
 
   return (
     <header className="bg-white shadow-sm border-b sticky top-0 z-50">
