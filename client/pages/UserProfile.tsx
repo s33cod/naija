@@ -239,25 +239,43 @@ const professionalData = {
   },
   davido: {
     id: 3,
+    firstName: "David",
+    lastName: "Adeleke",
     name: "Davido",
     title: "International Music Artist & CEO, DMW",
+    company: "Davido Music Worldwide",
     industry: "Entertainment",
     location: "Lagos, Nigeria",
     image:
-      "https://res.cloudinary.com/demo/image/upload/w_400,h_400,c_fill,g_face/v1/samples/people/jazz.jpg",
+      "https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=400&h=400&fit=crop&crop=face",
     coverImage:
       "https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=1200&h=400&fit=crop",
     verified: true,
     connections: "30M+",
     followers: "25M",
     following: "2.1K",
-    expertise: [
+    professionalSkills: [
       "Music Production",
       "Entertainment",
       "Brand Management",
       "Afrobeats",
       "International Collaboration",
+      "Artist Management",
     ],
+    creativeSkills: [
+      "Songwriting",
+      "Music Composition",
+      "Performance Art",
+      "Music Video Direction",
+    ],
+    verifiedProfiles: {
+      linkedin: "https://linkedin.com/in/davido",
+      instagram: "https://instagram.com/davido",
+      facebook: "https://facebook.com/DavidoOfficial",
+      portfolio: "https://davidoofficial.com",
+    },
+    reputationScore: 94,
+    status: "available" as const,
     description:
       "Global Afrobeats superstar putting Nigerian music on the world map with chart-topping hits and international collaborations.",
     longBio:
