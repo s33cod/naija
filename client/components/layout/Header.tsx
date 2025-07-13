@@ -160,16 +160,31 @@ export default function Header() {
             </a>
           </nav>
 
-          <div className="flex items-center space-x-4">
+          <div className="flex items-center space-x-3">
+            {/* Mobile menu button */}
             <Button
               variant="outline"
-              className="hidden sm:flex"
+              size="sm"
+              className="lg:hidden p-2"
+              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+            >
+              {isMobileMenuOpen ? (
+                <X className="w-4 h-4" />
+              ) : (
+                <Menu className="w-4 h-4" />
+              )}
+            </Button>
+
+            <Button
+              variant="outline"
+              className="hidden sm:flex text-sm"
               onClick={handleSignIn}
             >
               Sign In
             </Button>
             <Button
-              className="bg-naija-green hover:bg-naija-green-dark"
+              size="sm"
+              className="bg-naija-green hover:bg-naija-green-dark text-sm px-4"
               onClick={handleJoinPlatform}
             >
               Join Platform
@@ -178,25 +193,61 @@ export default function Header() {
         </div>
       </div>
 
-      {/* Mobile Navigation */}
-      <div className="md:hidden border-t bg-white">
-        <nav className="max-w-7xl mx-auto px-4 py-2">
-          <div className="flex justify-around text-sm">
-            <a href="/" className="text-gray-900 font-medium">
-              Home
-            </a>
-            <a href="/discovery" className="text-gray-600">
-              Discover
-            </a>
-            <a href="/industry" className="text-gray-600">
-              Industries
-            </a>
-            <a href="/about" className="text-gray-600">
-              About
-            </a>
-          </div>
-        </nav>
-      </div>
+      {/* Mobile Navigation Menu */}
+      {isMobileMenuOpen && (
+        <div className="lg:hidden border-t bg-white shadow-lg">
+          <nav className="max-w-7xl mx-auto px-4 py-4">
+            <div className="space-y-2">
+              <a href="/" className={mobileNavLinkClasses("/")}>
+                <Home className="w-5 h-5" />
+                Home
+              </a>
+              <a
+                href="/discovery"
+                className={mobileNavLinkClasses("/discovery")}
+              >
+                <Search className="w-5 h-5" />
+                Discover Talents
+              </a>
+              <a href="/industry" className={mobileNavLinkClasses("/industry")}>
+                <Building2 className="w-5 h-5" />
+                Industries
+              </a>
+              <a href="/news" className={mobileNavLinkClasses("/news")}>
+                <Newspaper className="w-5 h-5" />
+                News
+              </a>
+              <a href="/stories" className={mobileNavLinkClasses("/stories")}>
+                <BookOpen className="w-5 h-5" />
+                Success Stories
+              </a>
+              <a href="/about" className={mobileNavLinkClasses("/about")}>
+                <Info className="w-5 h-5" />
+                About Nigeria
+              </a>
+
+              {/* Featured Industries in Mobile */}
+              <div className="pt-4 border-t">
+                <p className="text-xs font-semibold text-gray-500 uppercase tracking-wide mb-3 px-4">
+                  Popular Industries
+                </p>
+                <div className="grid grid-cols-2 gap-2">
+                  {industries.slice(0, 6).map((industry) => (
+                    <a
+                      key={industry.path}
+                      href={industry.path}
+                      className="flex items-center gap-2 px-3 py-2 text-sm text-gray-600 hover:text-naija-green hover:bg-naija-green/5 rounded-lg transition-colors"
+                    >
+                      <span>{industry.icon}</span>
+                      <span className="truncate">{industry.name}</span>
+                    </a>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </nav>
+        </div>
+      )}
 
       <AuthModal
         isOpen={authModalOpen}
