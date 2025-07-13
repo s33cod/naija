@@ -384,7 +384,7 @@ export default function Index() {
                               className="w-16 h-16 rounded-full object-cover"
                             />
                             {professional.verified && (
-                              <div className="absolute -top-1 -right-1 w-6 h-6 bg-nigerian-green rounded-full flex items-center justify-center">
+                              <div className="absolute -top-1 -right-1 w-6 h-6 bg-naija-green rounded-full flex items-center justify-center">
                                 <Award className="w-3 h-3 text-white" />
                               </div>
                             )}
