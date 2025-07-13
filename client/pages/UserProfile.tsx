@@ -320,48 +320,13 @@ export default function UserProfile() {
 
   return (
     <div className="min-h-screen bg-background">
-      {/* Header */}
-      <header className="bg-white shadow-sm border-b">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between items-center h-16">
-            <div className="flex items-center space-x-4">
-              <div className="flex items-center space-x-2">
-                <div className="w-8 h-8 bg-gradient-to-r from-naija-green to-naija-green-light rounded-full"></div>
-                <span className="text-xl font-bold text-gray-900">
-                  NaijaPro Connect
-                </span>
-              </div>
-            </div>
-            <nav className="hidden md:flex space-x-8">
-              <a href="/" className="text-gray-600 hover:text-primary">
-                Home
-              </a>
-              <a
-                href="/professionals"
-                className="text-gray-600 hover:text-primary"
-              >
-                Professionals
-              </a>
-              <a href="/industry" className="text-gray-600 hover:text-primary">
-                Industries
-              </a>
-              <a
-                href="/blockchain"
-                className="text-gray-600 hover:text-primary"
-              >
-                Blockchain
-              </a>
-            </nav>
-            <div className="flex items-center space-x-4">
-              <Button variant="outline">Sign In</Button>
-              <WalletConnectionButton />
-              <Button className="bg-naija-green hover:bg-naija-green-dark">
-                Join Network
-              </Button>
-            </div>
-          </div>
-        </div>
-      </header>
+      <SEOHead
+        title={`${professional.name} - Professional Profile | Talk About Nigeria`}
+        description={professional.description}
+        keywords={`${professional.name}, ${professional.industry}, Nigerian professional, ${professional.expertise?.join(", ") || professional.professionalSkills?.join(", ") || ""}`}
+      />
+
+      <Header />
 
       {/* Profile Hero Section */}
       <section className="relative">
