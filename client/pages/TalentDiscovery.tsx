@@ -27,7 +27,9 @@ import {
   DialogTitle,
   DialogTrigger,
 } from "@/components/ui/dialog";
-import { WalletConnectionButton } from "@/components/blockchain/WalletAuth";
+import Header from "@/components/layout/Header";
+import Footer from "@/components/layout/Footer";
+import SEOHead from "@/components/layout/SEOHead";
 import {
   Search,
   Filter,
@@ -147,48 +149,13 @@ export default function TalentDiscovery() {
 
   return (
     <div className="min-h-screen bg-background">
-      {/* Header */}
-      <header className="bg-white shadow-sm border-b">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between items-center h-16">
-            <div className="flex items-center space-x-4">
-              <div className="flex items-center space-x-2">
-                <div className="w-8 h-8 bg-gradient-to-r from-naija-green to-naija-green-light rounded-full"></div>
-                <span className="text-xl font-bold text-gray-900">
-                  Talk About Nigeria
-                </span>
-              </div>
-            </div>
-            <nav className="hidden md:flex space-x-8">
-              <a href="/" className="text-gray-600 hover:text-primary">
-                Home
-              </a>
-              <a
-                href="/discovery"
-                className="text-gray-900 hover:text-primary font-medium"
-              >
-                Discover Talents
-              </a>
-              <a href="/industry" className="text-gray-600 hover:text-primary">
-                Industries
-              </a>
-              <a
-                href="/blockchain"
-                className="text-gray-600 hover:text-primary"
-              >
-                Blockchain
-              </a>
-            </nav>
-            <div className="flex items-center space-x-4">
-              <Button variant="outline">Sign In</Button>
-              <WalletConnectionButton />
-              <Button className="bg-naija-green hover:bg-naija-green-dark">
-                Join Network
-              </Button>
-            </div>
-          </div>
-        </div>
-      </header>
+      <SEOHead
+        title="Discover Nigerian Talents - AI-Powered Talent Search"
+        description="Find and connect with Nigeria's brightest professionals using our advanced AI search. Discover talents across industries with verified social profiles."
+        keywords="Nigerian talent search, AI talent discovery, professional networking Nigeria, find Nigerian professionals"
+      />
+
+      <Header />
 
       {/* Hero Search Section */}
       <section className="bg-gradient-to-r from-naija-green to-naija-green-light text-white py-16">
@@ -526,6 +493,8 @@ export default function TalentDiscovery() {
           </div>
         </div>
       </div>
+
+      <Footer />
     </div>
   );
 }
