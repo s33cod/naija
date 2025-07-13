@@ -113,12 +113,12 @@ const professionals = [
     industry: "Banking & Finance",
     location: "Lagos, Nigeria",
     image:
-      "https://res.cloudinary.com/demo/image/upload/w_400,h_400,c_fill,g_face/v1/samples/people/boy-snow-hoodie.jpg",
+      "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop&crop=face",
     verified: true,
     connections: "10M+",
     expertise: ["Investment Banking", "Entrepreneurship", "Philanthropy"],
     description:
-      "Leading African entrepreneur and philanthropist driving economic transformation across Africa.",
+      "Leading African entrepreneur and philanthropist driving economic transformation across Africa through UBA Group and Tony Elumelu Foundation.",
   },
   {
     id: 2,
@@ -127,12 +127,12 @@ const professionals = [
     industry: "Oil & Gas",
     location: "Lagos, Nigeria",
     image:
-      "https://res.cloudinary.com/demo/image/upload/w_400,h_400,c_fill,g_face/v1/samples/people/kitchen-bar.jpg",
+      "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&h=400&fit=crop&crop=face",
     verified: true,
     connections: "5M+",
     expertise: ["Oil & Gas", "Manufacturing", "Infrastructure"],
     description:
-      "Africa's richest man and industrial giant transforming Nigeria's economy.",
+      "Africa's richest man and industrial giant transforming Nigeria's economy through Dangote Group's diversified business empire.",
   },
   {
     id: 3,
@@ -141,12 +141,12 @@ const professionals = [
     industry: "Entertainment",
     location: "Lagos, Nigeria",
     image:
-      "https://res.cloudinary.com/demo/image/upload/w_400,h_400,c_fill,g_face/v1/samples/people/jazz.jpg",
+      "https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=400&h=400&fit=crop&crop=face",
     verified: true,
     connections: "30M+",
     expertise: ["Music Production", "Entertainment", "Brand Management"],
     description:
-      "Global Afrobeats superstar putting Nigerian music on the world map.",
+      "Global Afrobeats superstar and cultural ambassador putting Nigerian music on the world map with international collaborations.",
   },
 ];
 
