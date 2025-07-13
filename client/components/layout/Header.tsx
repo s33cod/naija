@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import {
   DropdownMenu,
@@ -7,7 +7,17 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 import AuthModal from "@/components/auth/AuthModal";
-import { ChevronDown } from "lucide-react";
+import {
+  ChevronDown,
+  Home,
+  Search,
+  Building2,
+  Info,
+  BookOpen,
+  Newspaper,
+  Menu,
+  X,
+} from "lucide-react";
 
 const industries = [
   { name: "Banking & Finance", path: "/industry/banking-finance", icon: "🏦" },
