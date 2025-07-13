@@ -125,20 +125,40 @@ export default function BankingFinance() {
       <Header />
 
       {/* Hero Section */}
-      <section className="bg-gradient-to-r from-naija-green to-naija-green-light text-white py-16">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-4xl md:text-6xl font-bold mb-4">
-            🏦 Banking & Finance
+      <section
+        className="relative bg-gradient-to-r from-naija-green/90 to-naija-green-light/90 text-white py-20 overflow-hidden"
+        style={{
+          backgroundImage: `url('https://images.pexels.com/photos/259027/pexels-photo-259027.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1080')`,
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          backgroundAttachment: "fixed",
+        }}
+      >
+        <div className="absolute inset-0 bg-gradient-to-r from-naija-green/85 to-naija-green-light/85"></div>
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <div className="inline-flex items-center gap-2 bg-white/20 backdrop-blur-sm text-white px-4 py-2 rounded-full text-sm font-medium mb-6">
+            🏦 Banking & Finance Professionals
+          </div>
+          <h1 className="text-4xl md:text-6xl font-bold mb-6 drop-shadow-lg">
+            Nigerian Banking & Finance
+            <span className="block text-yellow-300">Excellence</span>
           </h1>
-          <p className="text-xl md:text-2xl mb-8 opacity-90">
-            Connect with Nigeria's leading financial experts and entrepreneurs
+          <p className="text-xl md:text-2xl mb-8 opacity-95 max-w-3xl mx-auto drop-shadow-md">
+            Connect with Nigeria's leading financial experts, entrepreneurs, and
+            banking professionals who are shaping the future of African finance
           </p>
-          <div className="flex justify-center">
+          <div className="flex flex-col sm:flex-row justify-center gap-4">
             <Badge
               variant="secondary"
-              className="text-lg px-6 py-2 bg-white text-naija-green"
+              className="text-lg px-6 py-3 bg-white/90 text-naija-green backdrop-blur-sm"
             >
               {mentors.length} Expert Mentors Available
+            </Badge>
+            <Badge
+              variant="outline"
+              className="text-lg px-6 py-3 border-white text-white backdrop-blur-sm"
+            >
+              🌍 Global Network
             </Badge>
           </div>
         </div>
