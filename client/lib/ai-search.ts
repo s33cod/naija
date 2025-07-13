@@ -643,6 +643,59 @@ export class TalentSearchEngine {
     return uniqueTags.slice(0, 10);
   }
 
+  // Get fallback results when no exact matches found
+  private getFallbackResults(filters: SearchFilters): TalentProfile[] {
+    // If query exists, try partial matches
+    if (filters.query) {
+      const query = filters.query.toLowerCase();
+      const partialMatches = this.database.filter((profile) => {
+        const searchableText = [
+          profile.name,
+          profile.professionalTitle,
+          profile.primaryIndustry,
+          ...profile.skillTags,
+          ...profile.creativeSkills,
+        ]
+          .join(" ")
+          .toLowerCase();
+
+        // Check if any word in query matches
+        const queryWords = query.split(/[\s+&,]+/);
+        return queryWords.some(
+          (word) => word.length > 2 && searchableText.includes(word),
+        );
+      });
+
+      if (partialMatches.length > 0) {
+        return partialMatches.slice(0, 6);
+      }
+    }
+
+    // If industry filter exists, show similar industry professionals
+    if (filters.industries && filters.industries.length > 0) {
+      const industryMatches = this.database.filter((profile) =>
+        filters.industries!.some(
+          (industry) =>
+            profile.primaryIndustry
+              .toLowerCase()
+              .includes(industry.toLowerCase()) ||
+            profile.secondaryIndustries.some((sec) =>
+              sec.toLowerCase().includes(industry.toLowerCase()),
+            ),
+        ),
+      );
+
+      if (industryMatches.length > 0) {
+        return industryMatches.slice(0, 6);
+      }
+    }
+
+    // Default fallback: return trending/top-rated professionals
+    return this.database
+      .sort((a, b) => b.reputationScore - a.reputationScore)
+      .slice(0, 6);
+  }
+
   // Get trending profiles
   private getTrendingProfiles(): TalentProfile[] {
     return this.database
