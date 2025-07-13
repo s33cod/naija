@@ -240,11 +240,30 @@ export default function BankingFinance() {
               <CardHeader className="pb-4">
                 <div className="flex items-center space-x-4">
                   <div className="relative">
-                    <img
-                      src={mentor.image}
-                      alt={mentor.name}
-                      className="w-20 h-20 rounded-full object-cover"
-                    />
+                    <div className="relative w-20 h-20">
+                      <img
+                        src={mentor.image}
+                        alt={mentor.name}
+                        className="w-20 h-20 rounded-full object-cover"
+                        onError={(e) => {
+                          console.warn(
+                            `Image failed to load for ${mentor.name}, showing fallback`,
+                          );
+                          e.currentTarget.style.display = "none";
+                          const fallback = e.currentTarget.nextElementSibling;
+                          if (fallback) fallback.style.display = "flex";
+                        }}
+                      />
+                      <div
+                        style={{ display: "none" }}
+                        className="absolute inset-0 w-20 h-20 rounded-full bg-gradient-to-br from-naija-green to-naija-green-light flex items-center justify-center text-white font-bold text-lg shadow-lg"
+                      >
+                        {mentor.name
+                          .split(" ")
+                          .map((n) => n[0])
+                          .join("")}
+                      </div>
+                    </div>
                     {mentor.verified && (
                       <div className="absolute -top-1 -right-1 w-7 h-7 bg-naija-green rounded-full flex items-center justify-center">
                         <Award className="w-4 h-4 text-white" />
