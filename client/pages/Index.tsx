@@ -257,25 +257,45 @@ export default function Index() {
         {/* Hero Section */}
         <section className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-            Connect with Nigeria's Top Professionals
+            Discover Nigeria's Unique Talents
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-8">
-            Discover talented professionals and gifted individuals across every
-            industry. Validated through social profiles, work references, and
-            digital footprints.
+          <p className="text-xl text-gray-600 max-w-4xl mx-auto mb-6">
+            Find professionals and gifted individuals who share your interests
+            across any industry. Discover real people with real
+            talents—validated through their social profiles, work references,
+            and digital footprints.
           </p>
+          <p className="text-lg text-gray-500 max-w-3xl mx-auto mb-8">
+            Search by name, industry, location, social network, or specialty
+            using our AI-powered discovery engine.
+          </p>
+
+          <div className="flex justify-center mb-8">
+            <a href="/discovery">
+              <Button
+                size="lg"
+                className="bg-naija-green hover:bg-naija-green-dark text-lg px-8 py-4"
+              >
+                🚀 Discover Talents with AI
+              </Button>
+            </a>
+          </div>
+
           <div className="flex flex-wrap justify-center gap-4">
             <Badge variant="secondary" className="text-sm px-4 py-2">
-              🔍 Search by Name
+              🧠 AI-Powered Search
             </Badge>
             <Badge variant="secondary" className="text-sm px-4 py-2">
-              🏭 Filter by Industry
+              🔍 Skill + Interest Matching
             </Badge>
             <Badge variant="secondary" className="text-sm px-4 py-2">
-              📍 Find by Location
+              ✅ Social Verification
             </Badge>
             <Badge variant="secondary" className="text-sm px-4 py-2">
-              🌐 Connect via Social
+              🌟 Creative + Professional Talents
+            </Badge>
+            <Badge variant="secondary" className="text-sm px-4 py-2">
+              🔗 Blockchain Verified
             </Badge>
           </div>
         </section>
