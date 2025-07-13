@@ -160,25 +160,42 @@ const professionalData = {
   },
   "aliko-dangote": {
     id: 2,
+    firstName: "Aliko",
+    lastName: "Dangote",
     name: "Aliko Dangote",
     title: "President & CEO, Dangote Group",
+    company: "Dangote Group",
     industry: "Oil & Gas",
     location: "Lagos, Nigeria",
     image:
-      "https://res.cloudinary.com/demo/image/upload/w_400,h_400,c_fill,g_face/v1/samples/people/kitchen-bar.jpg",
+      "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&h=400&fit=crop&crop=face",
     coverImage:
       "https://images.unsplash.com/photo-1541888946425-d81bb19240f5?w=1200&h=400&fit=crop",
     verified: true,
     connections: "5M+",
     followers: "1.8M",
     following: "892",
-    expertise: [
+    professionalSkills: [
       "Oil & Gas",
       "Manufacturing",
       "Infrastructure",
       "Cement Production",
       "Sugar Refining",
+      "Strategic Planning",
     ],
+    creativeSkills: [
+      "Business Innovation",
+      "Industrial Design",
+      "Strategic Thinking",
+    ],
+    verifiedProfiles: {
+      linkedin: "https://linkedin.com/in/alikodangote",
+      instagram: "https://instagram.com/alikodangote",
+      facebook: "https://facebook.com/DangoteGroup",
+      portfolio: "https://dangote.com",
+    },
+    reputationScore: 96,
+    status: "available" as const,
     description:
       "Africa's richest man and industrial giant transforming Nigeria's economy through large-scale manufacturing and infrastructure development.",
     longBio:
