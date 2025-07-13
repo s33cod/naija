@@ -345,7 +345,12 @@ export default function Index() {
                       </div>
                       <div className="flex-1">
                         <CardTitle className="text-lg">
-                          {professional.name}
+                          <a
+                            href={`/profile/${professional.name.toLowerCase().replace(/ /g, "-")}`}
+                            className="hover:text-naija-green transition-colors cursor-pointer"
+                          >
+                            {professional.name}
+                          </a>
                         </CardTitle>
                         <CardDescription className="text-sm">
                           {professional.title}
