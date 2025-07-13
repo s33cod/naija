@@ -271,6 +271,18 @@ const App = () => (
                 </RouteWithSEO>
               }
             />
+            <Route
+              path="/profile/:userId"
+              element={
+                <RouteWithSEO
+                  title="Professional Profile - NaijaPro Connect"
+                  description="View detailed professional profile, experience, education, and activities of Nigerian industry leaders."
+                  keywords="professional profile, Nigerian professionals, user profile, networking"
+                >
+                  <UserProfile />
+                </RouteWithSEO>
+              }
+            />
             <Route path="/news" element={<NewsPage />} />
             <Route path="/community" element={<CommunityPage />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
