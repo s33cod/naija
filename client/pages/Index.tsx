@@ -44,6 +44,7 @@ const heroSlides = [
       "AI-powered platform to find professionals who share your passions",
     cta: "Start Discovering",
     highlight: "🔍 AI-Powered Search",
+    backgroundImage: "https://images.pexels.com/photos/7688336/pexels-photo-7688336.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1080&fit=crop",
   },
   {
     id: 2,
@@ -52,6 +53,7 @@ const heroSlides = [
       "Find UX Designers who paint, Bankers who make music, Engineers who write",
     cta: "Explore Talents",
     highlight: "🎨 Creative + Professional",
+    backgroundImage: "https://images.pexels.com/photos/3184287/pexels-photo-3184287.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1080&fit=crop",
   },
   {
     id: 3,
@@ -60,6 +62,7 @@ const heroSlides = [
       "Connect with talents validated through social profiles and community",
     cta: "Join Network",
     highlight: "✅ Social Verified",
+    backgroundImage: "https://images.pexels.com/photos/3184338/pexels-photo-3184338.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1080&fit=crop",
   },
 ];
 
@@ -205,18 +208,26 @@ export default function Index() {
 
       <Header />
 
-      {/* Hero Section with Search */}
-      <section className="relative h-[500px] overflow-hidden bg-gradient-to-br from-naija-green via-naija-green-light to-emerald-400">
-        <div className="absolute inset-0 bg-black bg-opacity-20"></div>
+            {/* Hero Section with Search */}
+      <section className="relative h-[500px] overflow-hidden">
         <div
-          className="flex transition-transform duration-500 ease-in-out h-full relative z-10"
+          className="flex transition-transform duration-500 ease-in-out h-full"
           style={{ transform: `translateX(-${currentSlide * 100}%)` }}
         >
           {heroSlides.map((slide, index) => (
             <div
               key={slide.id}
-              className="w-full h-full flex-shrink-0 flex items-center justify-center text-center text-white px-4"
+              className="w-full h-full flex-shrink-0 relative"
+              style={{
+                backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('${slide.backgroundImage}')`,
+                backgroundSize: 'cover',
+                backgroundPosition: 'center',
+                backgroundRepeat: 'no-repeat',
+              }}
             >
+              <div className="absolute inset-0 bg-gradient-to-r from-naija-green/20 to-naija-green-dark/20"></div>
+              <div className="relative z-10 h-full flex items-center justify-center text-center text-white px-4">
+                <div className="max-w-4xl mx-auto">
               <div className="max-w-4xl mx-auto">
                 <div className="mb-4">
                   <Badge className="bg-white bg-opacity-20 text-white border-white border-opacity-30 mb-4">
@@ -268,7 +279,7 @@ export default function Index() {
                   >
                     How It Works
                   </Button>
-                </div>
+                                </div>
               </div>
             </div>
           ))}
