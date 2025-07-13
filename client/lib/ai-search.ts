@@ -88,7 +88,7 @@ export interface SearchFilters {
 
   // Profile Types
   profileTypes?: ("gifted" | "certified" | "rising-star" | "mentor")[];
-  status?: ("active" | "available")[];
+  status?: ("active" | "inactive" | "available" | "busy")[];
 
   // Social Verification
   hasLinkedIn?: boolean;
