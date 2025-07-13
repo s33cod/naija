@@ -44,7 +44,8 @@ const heroSlides = [
       "AI-powered platform to find professionals who share your passions",
     cta: "Start Discovering",
     highlight: "🔍 AI-Powered Search",
-    backgroundImage: "https://images.pexels.com/photos/7688336/pexels-photo-7688336.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1080&fit=crop",
+    backgroundImage:
+      "https://images.pexels.com/photos/7688336/pexels-photo-7688336.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1080&fit=crop",
   },
   {
     id: 2,
@@ -53,7 +54,8 @@ const heroSlides = [
       "Find UX Designers who paint, Bankers who make music, Engineers who write",
     cta: "Explore Talents",
     highlight: "🎨 Creative + Professional",
-    backgroundImage: "https://images.pexels.com/photos/3184287/pexels-photo-3184287.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1080&fit=crop",
+    backgroundImage:
+      "https://images.pexels.com/photos/3184287/pexels-photo-3184287.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1080&fit=crop",
   },
   {
     id: 3,
@@ -62,7 +64,8 @@ const heroSlides = [
       "Connect with talents validated through social profiles and community",
     cta: "Join Network",
     highlight: "✅ Social Verified",
-    backgroundImage: "https://images.pexels.com/photos/3184338/pexels-photo-3184338.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1080&fit=crop",
+    backgroundImage:
+      "https://images.pexels.com/photos/3184338/pexels-photo-3184338.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1080&fit=crop",
   },
 ];
 
@@ -208,7 +211,7 @@ export default function Index() {
 
       <Header />
 
-            {/* Hero Section with Search */}
+      {/* Hero Section with Search */}
       <section className="relative h-[500px] overflow-hidden">
         <div
           className="flex transition-transform duration-500 ease-in-out h-full"
@@ -220,65 +223,67 @@ export default function Index() {
               className="w-full h-full flex-shrink-0 relative"
               style={{
                 backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('${slide.backgroundImage}')`,
-                backgroundSize: 'cover',
-                backgroundPosition: 'center',
-                backgroundRepeat: 'no-repeat',
+                backgroundSize: "cover",
+                backgroundPosition: "center",
+                backgroundRepeat: "no-repeat",
               }}
             >
               <div className="absolute inset-0 bg-gradient-to-r from-naija-green/20 to-naija-green-dark/20"></div>
               <div className="relative z-10 h-full flex items-center justify-center text-center text-white px-4">
                 <div className="max-w-4xl mx-auto">
-              <div className="max-w-4xl mx-auto">
-                <div className="mb-4">
-                  <Badge className="bg-white bg-opacity-20 text-white border-white border-opacity-30 mb-4">
-                    {slide.highlight}
-                  </Badge>
-                </div>
-                <h1 className="text-4xl md:text-6xl font-bold mb-4">
-                  {slide.title}
-                </h1>
-                <p className="text-xl md:text-2xl mb-8 opacity-95">
-                  {slide.description}
-                </p>
+                  <div className="mb-4">
+                    <Badge className="bg-white bg-opacity-20 text-white border-white border-opacity-30 mb-4">
+                      {slide.highlight}
+                    </Badge>
+                  </div>
+                  <h1 className="text-4xl md:text-6xl font-bold mb-4">
+                    {slide.title}
+                  </h1>
+                  <p className="text-xl md:text-2xl mb-8 opacity-95">
+                    {slide.description}
+                  </p>
 
-                {/* Main Search Bar */}
-                <div className="max-w-2xl mx-auto mb-8">
-                  <div className="flex gap-3">
-                    <div className="relative flex-1">
-                      <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
-                      <Input
-                        placeholder="Search: 'UX Designer + Photographer' or 'Banker + Musician'"
-                        value={searchQuery}
-                        onChange={(e) => setSearchQuery(e.target.value)}
-                        onKeyPress={(e) => e.key === "Enter" && handleSearch()}
-                        className="pl-10 h-12 text-lg bg-white text-gray-900"
-                      />
+                  {/* Main Search Bar */}
+                  <div className="max-w-2xl mx-auto mb-8">
+                    <div className="flex gap-3">
+                      <div className="relative flex-1">
+                        <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
+                        <Input
+                          placeholder="Search: 'UX Designer + Photographer' or 'Banker + Musician'"
+                          value={searchQuery}
+                          onChange={(e) => setSearchQuery(e.target.value)}
+                          onKeyPress={(e) =>
+                            e.key === "Enter" && handleSearch()
+                          }
+                          className="pl-10 h-12 text-lg bg-white text-gray-900"
+                        />
+                      </div>
+                      <Button
+                        onClick={handleSearch}
+                        size="lg"
+                        className="h-12 px-6 bg-white text-naija-green hover:bg-gray-100"
+                      >
+                        Search
+                      </Button>
                     </div>
+                  </div>
+
+                  <div className="flex justify-center gap-4">
                     <Button
-                      onClick={handleSearch}
                       size="lg"
-                      className="h-12 px-6 bg-white text-naija-green hover:bg-gray-100"
+                      className="bg-white text-naija-green hover:bg-gray-100"
+                      onClick={() => (window.location.href = "/discovery")}
                     >
-                      Search
+                      🔍 {slide.cta}
+                    </Button>
+                    <Button
+                      size="lg"
+                      variant="outline"
+                      className="border-white text-white hover:bg-white hover:text-naija-green"
+                    >
+                      How It Works
                     </Button>
                   </div>
-                </div>
-
-                <div className="flex justify-center gap-4">
-                  <Button
-                    size="lg"
-                    className="bg-white text-naija-green hover:bg-gray-100"
-                    onClick={() => (window.location.href = "/discovery")}
-                  >
-                    🔍 {slide.cta}
-                  </Button>
-                  <Button
-                    size="lg"
-                    variant="outline"
-                    className="border-white text-white hover:bg-white hover:text-naija-green"
-                  >
-                    How It Works
-                                    </Button>
                 </div>
               </div>
             </div>
