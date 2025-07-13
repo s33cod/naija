@@ -103,50 +103,13 @@ export default function Entertainment() {
 
   return (
     <div className="min-h-screen bg-background">
-      {/* Header */}
-      <header className="bg-white shadow-sm border-b">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between items-center h-16">
-            <div className="flex items-center space-x-4">
-              <div className="flex items-center space-x-2">
-                <div className="w-8 h-8 bg-gradient-to-r from-naija-green to-naija-green-light rounded-full"></div>
-                <span className="text-xl font-bold text-gray-900">
-                  NaijaPro Connect
-                </span>
-              </div>
-            </div>
-            <nav className="hidden md:flex space-x-8">
-              <a href="/" className="text-gray-600 hover:text-primary">
-                Home
-              </a>
-              <a
-                href="/professionals"
-                className="text-gray-600 hover:text-primary"
-              >
-                Professionals
-              </a>
-              <a
-                href="/industry"
-                className="text-gray-900 hover:text-primary font-medium"
-              >
-                Industries
-              </a>
-              <a href="/news" className="text-gray-600 hover:text-primary">
-                News
-              </a>
-              <a href="/community" className="text-gray-600 hover:text-primary">
-                Community
-              </a>
-            </nav>
-            <div className="flex items-center space-x-4">
-              <Button variant="outline">Sign In</Button>
-              <Button className="bg-naija-green hover:bg-naija-green-dark">
-                Join Network
-              </Button>
-            </div>
-          </div>
-        </div>
-      </header>
+      <SEOHead
+        title="Entertainment Industry Professionals - Nigerian Creative Leaders"
+        description="Connect with Nigeria's entertainment leaders including Davido, Genevieve Nnaji, Mo Abudu and other creative industry professionals shaping Nollywood and Afrobeats."
+        keywords="Nigerian entertainment, Nollywood, Afrobeats, Davido, Genevieve Nnaji, Mo Abudu, creative industry professionals"
+      />
+
+      <Header />
 
       {/* Hero Section */}
       <section className="bg-gradient-to-r from-naija-green to-naija-green-light text-white py-16">
