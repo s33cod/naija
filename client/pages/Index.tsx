@@ -90,7 +90,8 @@ const professionals = [
     title: "Chairman, UBA Group",
     industry: "Banking & Finance",
     location: "Lagos, Nigeria",
-    image: "https://unavatar.io/tony-elumelu",
+    image:
+      "https://res.cloudinary.com/demo/image/upload/w_400,h_400,c_fill,g_face/v1/samples/people/boy-snow-hoodie.jpg",
     verified: true,
     connections: "10M+",
     expertise: ["Investment Banking", "Entrepreneurship", "Philanthropy"],
@@ -103,7 +104,8 @@ const professionals = [
     title: "President, Dangote Group",
     industry: "Oil & Gas",
     location: "Lagos, Nigeria",
-    image: "https://unavatar.io/aliko-dangote",
+    image:
+      "https://res.cloudinary.com/demo/image/upload/w_400,h_400,c_fill,g_face/v1/samples/people/kitchen-bar.jpg",
     verified: true,
     connections: "5M+",
     expertise: ["Oil & Gas", "Manufacturing", "Infrastructure"],
@@ -116,7 +118,8 @@ const professionals = [
     title: "International Music Artist",
     industry: "Entertainment",
     location: "Lagos, Nigeria",
-    image: "https://unavatar.io/davido",
+    image:
+      "https://res.cloudinary.com/demo/image/upload/w_400,h_400,c_fill,g_face/v1/samples/people/jazz.jpg",
     verified: true,
     connections: "30M+",
     expertise: ["Music Production", "Entertainment", "Brand Management"],
