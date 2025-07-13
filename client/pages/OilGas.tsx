@@ -106,7 +106,7 @@ export default function OilGas() {
     return matchesSearch && matchesFilter;
   });
 
-    return (
+  return (
     <div className="min-h-screen bg-background">
       <SEOHead
         title="Oil & Gas Professionals - Nigerian Energy Sector Experts"
@@ -115,11 +115,6 @@ export default function OilGas() {
       />
 
       <Header />
-              </Button>
-            </div>
-          </div>
-        </div>
-      </header>
 
       {/* Hero Section */}
       <section className="bg-gradient-to-r from-naija-green to-naija-green-light text-white py-16">
