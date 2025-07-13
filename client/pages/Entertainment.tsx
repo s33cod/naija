@@ -131,8 +131,16 @@ export default function Entertainment() {
         </div>
       </section>
 
-      {/* Search and Filter */}
+      {/* AI Search Widget */}
       <section className="py-8 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-8">
+          <AISearchWidget
+            industry="Entertainment"
+            placeholder="Search Entertainment professionals: 'Music Producer + Business Strategy' or 'Actor + Financial Planning'"
+          />
+        </div>
+
+        {/* Search and Filter */}
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col md:flex-row gap-4 items-center">
             <div className="relative flex-1">
