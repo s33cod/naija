@@ -27,7 +27,7 @@ const mentors = [
     industry: "Entertainment",
     location: "Lagos, Nigeria",
     image:
-      "https://pbs.twimg.com/profile_images/1735413305191063552/fKYHAaYX_400x400.jpg",
+      "https://res.cloudinary.com/demo/image/upload/w_400,h_400,c_fill,g_face/v1/samples/people/jazz.jpg",
     verified: true,
     connections: "30M+",
     expertise: [
@@ -49,7 +49,7 @@ const mentors = [
     industry: "Entertainment",
     location: "Lagos, Nigeria",
     image:
-      "https://pbs.twimg.com/profile_images/1598020636076089344/rCYuJ7w__400x400.jpg",
+      "https://res.cloudinary.com/demo/image/upload/w_400,h_400,c_fill,g_face/v1/samples/people/woman-on-bike.jpg",
     verified: true,
     connections: "15M+",
     expertise: ["Film Production", "Acting", "Directing", "Content Creation"],
@@ -66,7 +66,7 @@ const mentors = [
     industry: "Entertainment",
     location: "Lagos, Nigeria",
     image:
-      "https://pbs.twimg.com/profile_images/1654522062654177282/6O9oPdTz_400x400.jpg",
+      "https://res.cloudinary.com/demo/image/upload/w_400,h_400,c_fill,g_face/v1/samples/people/smile.jpg",
     verified: true,
     connections: "5M+",
     expertise: [
