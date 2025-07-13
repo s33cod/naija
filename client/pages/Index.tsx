@@ -312,27 +312,30 @@ export default function Index() {
                   <CardHeader className="pb-4">
                     <div className="flex items-center space-x-4">
                       <div className="relative">
-                        <img
-                          src={professional.image}
-                          alt={professional.name}
-                          className="w-16 h-16 rounded-full object-cover border-2 border-gray-200"
-                          onError={(e) => {
-                            console.error(
-                              `Failed to load image for ${professional.name}:`,
-                              professional.image,
-                            );
-                            e.currentTarget.style.display = "none";
-                            e.currentTarget.nextSibling.style.display = "flex";
-                          }}
-                        />
-                        <div
-                          style={{ display: "none" }}
-                          className="w-16 h-16 rounded-full bg-gray-200 flex items-center justify-center text-gray-600 font-bold text-lg"
-                        >
-                          {professional.name
-                            .split(" ")
-                            .map((n) => n[0])
-                            .join("")}
+                        <div className="relative w-16 h-16">
+                          <img
+                            src={professional.image}
+                            alt={professional.name}
+                            className="w-16 h-16 rounded-full object-cover border-2 border-gray-200"
+                            onError={(e) => {
+                              console.warn(
+                                `Image failed to load for ${professional.name}, showing fallback`,
+                              );
+                              e.currentTarget.style.display = "none";
+                              const fallback =
+                                e.currentTarget.nextElementSibling;
+                              if (fallback) fallback.style.display = "flex";
+                            }}
+                          />
+                          <div
+                            style={{ display: "none" }}
+                            className="absolute inset-0 w-16 h-16 rounded-full bg-gradient-to-br from-naija-green to-naija-green-light flex items-center justify-center text-white font-bold text-lg shadow-lg"
+                          >
+                            {professional.name
+                              .split(" ")
+                              .map((n) => n[0])
+                              .join("")}
+                          </div>
                         </div>
                         {professional.verified && (
                           <div className="absolute -top-1 -right-1 w-6 h-6 bg-naija-green rounded-full flex items-center justify-center">
