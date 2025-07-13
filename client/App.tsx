@@ -21,6 +21,11 @@ import TalentDiscovery from "./pages/TalentDiscovery";
 import Stories from "./pages/Stories";
 import About from "./pages/About";
 import Join from "./pages/Join";
+import Help from "./pages/Help";
+import Contact from "./pages/Contact";
+import Privacy from "./pages/Privacy";
+import Terms from "./pages/Terms";
+import Cookies from "./pages/Cookies";
 import { WalletProvider } from "./components/blockchain/WalletAuth";
 
 const queryClient = new QueryClient();
@@ -317,6 +322,11 @@ const App = () => (
               <Route path="/stories" element={<Stories />} />
               <Route path="/about" element={<About />} />
               <Route path="/join" element={<Join />} />
+              <Route path="/help" element={<Help />} />
+              <Route path="/contact" element={<Contact />} />
+              <Route path="/privacy" element={<Privacy />} />
+              <Route path="/terms" element={<Terms />} />
+              <Route path="/cookies" element={<Cookies />} />
               <Route path="/news" element={<NewsPage />} />
               <Route path="/community" element={<CommunityPage />} />
               {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
