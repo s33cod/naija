@@ -18,6 +18,9 @@ import BlockchainNetwork from "./pages/BlockchainNetwork";
 import AdminProfessionals from "./pages/AdminProfessionals";
 import UserProfile from "./pages/UserProfile";
 import TalentDiscovery from "./pages/TalentDiscovery";
+import Stories from "./pages/Stories";
+import About from "./pages/About";
+import Join from "./pages/Join";
 import { WalletProvider } from "./components/blockchain/WalletAuth";
 
 const queryClient = new QueryClient();
@@ -311,6 +314,9 @@ const App = () => (
                   </RouteWithSEO>
                 }
               />
+              <Route path="/stories" element={<Stories />} />
+              <Route path="/about" element={<About />} />
+              <Route path="/join" element={<Join />} />
               <Route path="/news" element={<NewsPage />} />
               <Route path="/community" element={<CommunityPage />} />
               {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
