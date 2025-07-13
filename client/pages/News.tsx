@@ -309,24 +309,49 @@ export default function News() {
 
       <Header />
 
-      <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        {/* Hero Section */}
-        <div className="text-center mb-12">
-          <div className="inline-flex items-center gap-2 bg-red-100 text-red-800 px-4 py-2 rounded-full text-sm font-medium mb-4">
+      {/* Hero Section */}
+      <section
+        className="relative bg-gradient-to-r from-red-600/90 to-red-800/90 text-white py-20 overflow-hidden"
+        style={{
+          backgroundImage: `url('https://images.pexels.com/photos/518543/pexels-photo-518543.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1080')`,
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          backgroundAttachment: "fixed",
+        }}
+      >
+        <div className="absolute inset-0 bg-gradient-to-r from-red-600/85 to-red-800/85"></div>
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <div className="inline-flex items-center gap-2 bg-white/20 backdrop-blur-sm text-white px-4 py-2 rounded-full text-sm font-medium mb-6">
             <Newspaper className="w-4 h-4" />
             Latest Nigerian News
           </div>
-          <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
+          <h1 className="text-4xl md:text-6xl font-bold mb-6 drop-shadow-lg">
             Nigeria News
-            <span className="block text-red-600">& Global Stories</span>
+            <span className="block text-yellow-300">& Global Stories</span>
           </h1>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          <p className="text-xl md:text-2xl mb-8 opacity-95 max-w-3xl mx-auto drop-shadow-md">
             Stay informed with the latest news from Nigeria and global stories
             about Nigerian achievements, innovations, and cultural impact around
             the world.
           </p>
+          <div className="flex flex-col sm:flex-row justify-center gap-4">
+            <Badge
+              variant="secondary"
+              className="text-lg px-6 py-3 bg-white/90 text-red-600 backdrop-blur-sm"
+            >
+              📰 Breaking News
+            </Badge>
+            <Badge
+              variant="outline"
+              className="text-lg px-6 py-3 border-white text-white backdrop-blur-sm"
+            >
+              🌍 Global Coverage
+            </Badge>
+          </div>
         </div>
+      </section>
 
+      <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         {/* Search and Filters */}
         <div className="mb-12">
           <Card className="p-6">
