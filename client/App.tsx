@@ -13,6 +13,7 @@ import OilGas from "./pages/OilGas";
 import Entertainment from "./pages/Entertainment";
 import IndustryHub from "./pages/IndustryHub";
 import BlockchainNetwork from "./pages/BlockchainNetwork";
+import AdminProfessionals from "./pages/AdminProfessionals";
 import { WalletProvider } from "./components/blockchain/WalletAuth";
 
 const queryClient = new QueryClient();
