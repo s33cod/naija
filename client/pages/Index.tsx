@@ -159,11 +159,8 @@ export default function Index() {
               <a href="/" className="text-gray-900 hover:text-primary">
                 Home
               </a>
-              <a
-                href="/professionals"
-                className="text-gray-600 hover:text-primary"
-              >
-                Professionals
+              <a href="/discovery" className="text-gray-600 hover:text-primary">
+                🔍 Discover Talents
               </a>
               <a href="/industry" className="text-gray-600 hover:text-primary">
                 Industries
