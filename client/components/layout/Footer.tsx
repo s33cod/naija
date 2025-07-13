@@ -25,7 +25,7 @@ export default function Footer() {
                 <img
                   src="https://cdn.builder.io/api/v1/image/assets%2Ff84bf105d9db46e28537df3ccb1c17d3%2Fc1d1b353699446cabb187f63b2cb9fdf?format=webp&width=800"
                   alt="Talk About Nigeria"
-                  className="h-10 w-auto"
+                  className="h-12 w-auto"
                 />
               </div>
               <p className="text-gray-400 mb-6 leading-relaxed">
