@@ -258,6 +258,18 @@ const App = () => (
                 </RouteWithSEO>
               }
             />
+            <Route
+              path="/admin/professionals"
+              element={
+                <RouteWithSEO
+                  title="Admin - Manage Professionals - NaijaPro Connect"
+                  description="Admin panel for managing professional profiles with mandatory image validation and verification requirements."
+                  keywords="admin, professional management, image validation, profile verification"
+                >
+                  <AdminProfessionals />
+                </RouteWithSEO>
+              }
+            />
             <Route path="/news" element={<NewsPage />} />
             <Route path="/community" element={<CommunityPage />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
