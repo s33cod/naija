@@ -22,10 +22,11 @@ export default function Footer() {
             {/* Brand Section */}
             <div className="md:col-span-1">
               <div className="flex items-center space-x-2 mb-4">
-                <div className="w-8 h-8 bg-gradient-to-r from-naija-green to-naija-green-light rounded-full flex items-center justify-center">
-                  <span className="text-white font-bold text-sm">🇳🇬</span>
-                </div>
-                <span className="text-xl font-bold">Talk About Nigeria</span>
+                <img
+                  src="https://cdn.builder.io/api/v1/image/assets%2Ff84bf105d9db46e28537df3ccb1c17d3%2Fc1d1b353699446cabb187f63b2cb9fdf?format=webp&width=800"
+                  alt="Talk About Nigeria"
+                  className="h-10 w-auto"
+                />
               </div>
               <p className="text-gray-400 mb-6 leading-relaxed">
                 Connecting Nigeria's brightest talents across all industries.
