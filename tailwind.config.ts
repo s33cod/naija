@@ -58,9 +58,10 @@ export default {
           ring: "hsl(var(--sidebar-ring))",
         },
         naija: {
-          green: "hsl(120, 60%, 40%)",
-          "green-light": "hsl(120, 40%, 50%)",
-          "green-dark": "hsl(120, 60%, 30%)",
+          green: "hsl(120, 70%, 25%)",
+          "green-light": "hsl(120, 60%, 35%)",
+          "green-dark": "hsl(120, 80%, 20%)",
+          "green-darker": "hsl(120, 85%, 15%)",
           white: "hsl(0, 0%, 100%)",
           "white-soft": "hsl(0, 0%, 98%)",
         },
