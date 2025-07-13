@@ -346,7 +346,7 @@ const App = () => (
                 path="/industry/transportation"
                 element={<Transportation />}
               />
-              <Route path="/news" element={<NewsPage />} />
+              <Route path="/news" element={<News />} />
               <Route path="/community" element={<CommunityPage />} />
               {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
               <Route path="*" element={<NotFound />} />
