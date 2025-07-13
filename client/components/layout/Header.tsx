@@ -6,6 +6,7 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
+import AuthModal from "@/components/auth/AuthModal";
 import { ChevronDown } from "lucide-react";
 
 const industries = [
@@ -23,6 +24,18 @@ const industries = [
 
 export default function Header() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [authModalOpen, setAuthModalOpen] = useState(false);
+  const [authMode, setAuthMode] = useState<"signin" | "join">("signin");
+
+  const handleSignIn = () => {
+    setAuthMode("signin");
+    setAuthModalOpen(true);
+  };
+
+  const handleJoinPlatform = () => {
+    setAuthMode("join");
+    setAuthModalOpen(true);
+  };
 
   return (
     <header className="bg-white shadow-sm border-b sticky top-0 z-50">
@@ -103,10 +116,17 @@ export default function Header() {
           </nav>
 
           <div className="flex items-center space-x-4">
-            <Button variant="outline" className="hidden sm:flex">
+            <Button
+              variant="outline"
+              className="hidden sm:flex"
+              onClick={handleSignIn}
+            >
               Sign In
             </Button>
-            <Button className="bg-naija-green hover:bg-naija-green-dark">
+            <Button
+              className="bg-naija-green hover:bg-naija-green-dark"
+              onClick={handleJoinPlatform}
+            >
               Join Platform
             </Button>
           </div>
@@ -132,6 +152,12 @@ export default function Header() {
           </div>
         </nav>
       </div>
+
+      <AuthModal
+        isOpen={authModalOpen}
+        onClose={() => setAuthModalOpen(false)}
+        initialMode={authMode}
+      />
     </header>
   );
 }
