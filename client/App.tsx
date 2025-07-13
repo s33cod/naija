@@ -15,6 +15,7 @@ import IndustryHub from "./pages/IndustryHub";
 import BlockchainNetwork from "./pages/BlockchainNetwork";
 import AdminProfessionals from "./pages/AdminProfessionals";
 import UserProfile from "./pages/UserProfile";
+import TalentDiscovery from "./pages/TalentDiscovery";
 import { WalletProvider } from "./components/blockchain/WalletAuth";
 
 const queryClient = new QueryClient();
