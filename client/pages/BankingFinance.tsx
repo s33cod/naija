@@ -20,6 +20,7 @@ import {
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import SEOHead from "@/components/layout/SEOHead";
+import AISearchWidget from "@/components/search/AISearchWidget";
 import {
   MapPin,
   Users,
@@ -192,6 +193,16 @@ export default function BankingFinance() {
               </Button>
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* AI Search Widget */}
+      <section className="py-8 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <AISearchWidget
+            industry="Banking & Finance"
+            placeholder="Search Banking & Finance professionals: 'Investment Banker + Photographer' or 'Financial Analyst + Musician'"
+          />
         </div>
       </section>
 
