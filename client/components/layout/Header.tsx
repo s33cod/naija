@@ -28,7 +28,7 @@ const industries = [
   { name: "Agriculture", path: "/industry/agriculture", icon: "🌾" },
   { name: "Education", path: "/industry/education", icon: "📚" },
   { name: "Construction", path: "/industry/construction", icon: "🏗️" },
-  { name: "Manufacturing", path: "/industry/manufacturing", icon: "���" },
+  { name: "Manufacturing", path: "/industry/manufacturing", icon: "🏭" },
   { name: "Transportation", path: "/industry/transportation", icon: "🚛" },
 ];
 
@@ -91,63 +91,72 @@ export default function Header() {
             </div>
           </div>
 
-          <nav className="hidden md:flex space-x-8">
-            <a
-              href="/"
-              className="text-gray-900 hover:text-naija-green font-medium transition-colors"
-            >
+          <nav className="hidden lg:flex items-center space-x-2">
+            <a href="/" className={navLinkClasses("/")}>
+              <Home className="w-4 h-4" />
               Home
             </a>
-            <a
-              href="/discovery"
-              className="text-gray-600 hover:text-naija-green transition-colors"
-            >
-              🔍 Discover Talents
+
+            <a href="/discovery" className={navLinkClasses("/discovery")}>
+              <Search className="w-4 h-4" />
+              Discover Talents
             </a>
 
             {/* Industries Dropdown */}
             <DropdownMenu>
               <DropdownMenuTrigger asChild>
-                <button className="flex items-center gap-1 text-gray-600 hover:text-naija-green transition-colors">
+                <button
+                  className={`${navLinkClasses("/industry")} ${
+                    currentPath.startsWith("/industry")
+                      ? "bg-naija-green text-white"
+                      : ""
+                  }`}
+                >
+                  <Building2 className="w-4 h-4" />
                   Industries
-                  <ChevronDown className="w-4 h-4" />
+                  <ChevronDown className="w-3 h-3 ml-1" />
                 </button>
               </DropdownMenuTrigger>
-              <DropdownMenuContent className="w-56">
+              <DropdownMenuContent className="w-64 shadow-lg border-0 bg-white">
                 <DropdownMenuItem asChild>
                   <a
                     href="/industry"
-                    className="flex items-center gap-2 w-full"
+                    className="flex items-center gap-3 w-full px-4 py-3 hover:bg-naija-green/5 transition-colors"
                   >
-                    🏢 All Industries
+                    <Building2 className="w-4 h-4 text-naija-green" />
+                    <span className="font-medium">All Industries</span>
                   </a>
                 </DropdownMenuItem>
                 <div className="border-t my-1"></div>
-                {industries.map((industry) => (
-                  <DropdownMenuItem key={industry.path} asChild>
-                    <a
-                      href={industry.path}
-                      className="flex items-center gap-2 w-full"
-                    >
-                      <span>{industry.icon}</span>
-                      {industry.name}
-                    </a>
-                  </DropdownMenuItem>
-                ))}
+                <div className="grid grid-cols-2 gap-1 p-2">
+                  {industries.map((industry) => (
+                    <DropdownMenuItem key={industry.path} asChild>
+                      <a
+                        href={industry.path}
+                        className="flex items-center gap-2 w-full px-3 py-2 rounded-md hover:bg-naija-green/5 transition-colors text-sm"
+                      >
+                        <span className="text-lg">{industry.icon}</span>
+                        <span className="truncate">{industry.name}</span>
+                      </a>
+                    </DropdownMenuItem>
+                  ))}
+                </div>
               </DropdownMenuContent>
             </DropdownMenu>
 
-            <a
-              href="/about"
-              className="text-gray-600 hover:text-naija-green transition-colors"
-            >
-              About Nigeria
+            <a href="/news" className={navLinkClasses("/news")}>
+              <Newspaper className="w-4 h-4" />
+              News
             </a>
-            <a
-              href="/stories"
-              className="text-gray-600 hover:text-naija-green transition-colors"
-            >
-              Success Stories
+
+            <a href="/stories" className={navLinkClasses("/stories")}>
+              <BookOpen className="w-4 h-4" />
+              Stories
+            </a>
+
+            <a href="/about" className={navLinkClasses("/about")}>
+              <Info className="w-4 h-4" />
+              About
             </a>
           </nav>
 
