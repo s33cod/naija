@@ -43,14 +43,15 @@ export default function Header() {
         <div className="flex justify-between items-center h-16">
           <div className="flex items-center space-x-4">
             <div className="flex items-center space-x-2">
-              <div className="w-8 h-8 bg-gradient-to-r from-naija-green to-naija-green-light rounded-full flex items-center justify-center">
-                <span className="text-white font-bold text-sm">🇳🇬</span>
-              </div>
               <a
                 href="/"
-                className="text-xl font-bold text-gray-900 hover:text-naija-green transition-colors"
+                className="flex items-center hover:opacity-90 transition-opacity"
               >
-                Talk About Nigeria
+                <img
+                  src="https://cdn.builder.io/api/v1/image/assets%2Ff84bf105d9db46e28537df3ccb1c17d3%2Fc8f09261fb5441098f1e36071edf4f5a?format=webp&width=800"
+                  alt="Talk About Nigeria"
+                  className="h-10 w-auto"
+                />
               </a>
             </div>
           </div>
