@@ -158,16 +158,29 @@ export default function TalentDiscovery() {
       <Header />
 
       {/* Hero Search Section */}
-      <section className="bg-gradient-to-r from-naija-green to-naija-green-light text-white py-16">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-4xl md:text-6xl font-bold mb-4">
-            🔍 Discover Nigerian Talents
+      <section
+        className="relative bg-gradient-to-r from-naija-green/90 to-naija-green-light/90 text-white py-20 overflow-hidden"
+        style={{
+          backgroundImage: `url('https://images.pexels.com/photos/3184306/pexels-photo-3184306.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1080')`,
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          backgroundAttachment: "fixed",
+        }}
+      >
+        <div className="absolute inset-0 bg-gradient-to-r from-naija-green/85 to-naija-green-light/85"></div>
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <div className="inline-flex items-center gap-2 bg-white/20 backdrop-blur-sm text-white px-4 py-2 rounded-full text-sm font-medium mb-6">
+            🔍 AI-Powered Talent Discovery
+          </div>
+          <h1 className="text-4xl md:text-6xl font-bold mb-6 drop-shadow-lg">
+            Discover Nigerian
+            <span className="block text-yellow-300">Talents</span>
           </h1>
-          <p className="text-xl md:text-2xl mb-8 opacity-90">
+          <p className="text-xl md:text-2xl mb-6 opacity-95 drop-shadow-md">
             Find professionals and gifted individuals who share your interests
             across any industry
           </p>
-          <p className="text-lg mb-8 opacity-80 max-w-4xl mx-auto">
+          <p className="text-lg mb-8 opacity-85 max-w-4xl mx-auto drop-shadow-md">
             Discover real people with real talents—validated through their
             social profiles, work references, and digital footprints. Search by
             name, industry, location, social network, or specialty.
