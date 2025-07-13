@@ -19,7 +19,10 @@ import {
   DialogTitle,
   DialogTrigger,
 } from "@/components/ui/dialog";
-import { WalletConnectionButton } from "@/components/blockchain/WalletAuth";
+import Header from "@/components/layout/Header";
+import Footer from "@/components/layout/Footer";
+import SEOHead from "@/components/layout/SEOHead";
+import UserProfileCard from "@/components/profile/UserProfileCard";
 import {
   MapPin,
   Users,
@@ -38,6 +41,11 @@ import {
   TrendingUp,
   Heart,
   MoreHorizontal,
+  Linkedin,
+  Instagram,
+  Facebook,
+  Verified,
+  Palette,
 } from "lucide-react";
 
 // Professional data - in a real app, this would come from an API
