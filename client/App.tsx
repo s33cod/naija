@@ -32,6 +32,7 @@ import Education from "./pages/Education";
 import Construction from "./pages/Construction";
 import Manufacturing from "./pages/Manufacturing";
 import Transportation from "./pages/Transportation";
+import News from "./pages/News";
 import { WalletProvider } from "./components/blockchain/WalletAuth";
 
 const queryClient = new QueryClient();
