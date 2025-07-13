@@ -52,25 +52,43 @@ import {
 const professionalData = {
   "tony-elumelu": {
     id: 1,
+    firstName: "Tony",
+    lastName: "Elumelu",
     name: "Tony Elumelu",
     title: "Chairman & CEO, UBA Group",
+    company: "UBA Group",
     industry: "Banking & Finance",
     location: "Lagos, Nigeria",
     image:
-      "https://res.cloudinary.com/demo/image/upload/w_400,h_400,c_fill,g_face/v1/samples/people/boy-snow-hoodie.jpg",
+      "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop&crop=face",
     coverImage:
       "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=1200&h=400&fit=crop",
     verified: true,
     connections: "10M+",
     followers: "2.5M",
     following: "1.2K",
-    expertise: [
+    professionalSkills: [
       "Investment Banking",
       "Entrepreneurship",
       "Philanthropy",
       "African Development",
       "Financial Inclusion",
+      "Strategic Planning",
     ],
+    creativeSkills: [
+      "Public Speaking",
+      "Motivational Writing",
+      "Mentorship",
+      "Community Building",
+    ],
+    verifiedProfiles: {
+      linkedin: "https://linkedin.com/in/tonyelumelu",
+      instagram: "https://instagram.com/tonyelumelu",
+      facebook: "https://facebook.com/TonyElumeluFoundation",
+      portfolio: "https://tonyelumelufoundation.org",
+    },
+    reputationScore: 98,
+    status: "available" as const,
     description:
       "Leading African entrepreneur and philanthropist driving economic transformation across Africa through the Tony Elumelu Foundation.",
     longBio:
