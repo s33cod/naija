@@ -17,6 +17,9 @@ import {
   DialogTitle,
   DialogTrigger,
 } from "@/components/ui/dialog";
+import Header from "@/components/layout/Header";
+import Footer from "@/components/layout/Footer";
+import SEOHead from "@/components/layout/SEOHead";
 import {
   MapPin,
   Users,
