@@ -26,6 +26,12 @@ import Contact from "./pages/Contact";
 import Privacy from "./pages/Privacy";
 import Terms from "./pages/Terms";
 import Cookies from "./pages/Cookies";
+import Healthcare from "./pages/Healthcare";
+import Agriculture from "./pages/Agriculture";
+import Education from "./pages/Education";
+import Construction from "./pages/Construction";
+import Manufacturing from "./pages/Manufacturing";
+import Transportation from "./pages/Transportation";
 import { WalletProvider } from "./components/blockchain/WalletAuth";
 
 const queryClient = new QueryClient();
@@ -327,6 +333,18 @@ const App = () => (
               <Route path="/privacy" element={<Privacy />} />
               <Route path="/terms" element={<Terms />} />
               <Route path="/cookies" element={<Cookies />} />
+              <Route path="/industry/healthcare" element={<Healthcare />} />
+              <Route path="/industry/agriculture" element={<Agriculture />} />
+              <Route path="/industry/education" element={<Education />} />
+              <Route path="/industry/construction" element={<Construction />} />
+              <Route
+                path="/industry/manufacturing"
+                element={<Manufacturing />}
+              />
+              <Route
+                path="/industry/transportation"
+                element={<Transportation />}
+              />
               <Route path="/news" element={<NewsPage />} />
               <Route path="/community" element={<CommunityPage />} />
               {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
