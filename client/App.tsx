@@ -6,6 +6,7 @@ import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
+import { HelmetProvider } from "react-helmet-async";
 import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
 import BankingFinance from "./pages/BankingFinance";
@@ -180,131 +181,133 @@ function ProfessionalsPage() {
 }
 
 const App = () => (
-  <QueryClientProvider client={queryClient}>
-    <WalletProvider>
-      <TooltipProvider>
-        <Toaster />
-        <Sonner />
-        <BrowserRouter>
-          <Routes>
-            <Route
-              path="/"
-              element={
-                <RouteWithSEO
-                  title="NaijaPro Connect - Nigeria's Premier Professional Network"
-                  description="Connect with Nigeria's top professionals across all industries. Discover verified talent, build networks, and collaborate with industry leaders like Tony Elumelu, Aliko Dangote, and Davido."
-                  keywords="Nigeria professionals, Tony Elumelu, Aliko Dangote, Davido, networking, banking finance, oil gas, entertainment, technology, professional network"
-                >
-                  <Index />
-                </RouteWithSEO>
-              }
-            />
-            <Route path="/professionals" element={<ProfessionalsPage />} />
-            <Route
-              path="/industry"
-              element={
-                <RouteWithSEO
-                  title="Industry Hub - NaijaPro Connect"
-                  description="Explore all Nigerian industries and connect with professional leaders across Banking, Oil & Gas, Entertainment, Technology, and more."
-                  keywords="Nigerian industries, professional sectors, industry hub, business sectors Nigeria, professional networking"
-                >
-                  <IndustryHub />
-                </RouteWithSEO>
-              }
-            />
-            <Route
-              path="/industry/banking-finance"
-              element={
-                <RouteWithSEO
-                  title="Banking & Finance Professionals - NaijaPro Connect"
-                  description="Connect with Nigeria's top banking and finance professionals including Tony Elumelu, Ngozi Okonjo-Iweala, and other industry leaders."
-                  keywords="Nigerian banking, finance professionals, Tony Elumelu, banking mentors, financial services Nigeria"
-                >
-                  <BankingFinance />
-                </RouteWithSEO>
-              }
-            />
-            <Route
-              path="/industry/oil-gas"
-              element={
-                <RouteWithSEO
-                  title="Oil & Gas Professionals - NaijaPro Connect"
-                  description="Connect with Nigeria's energy sector leaders including Aliko Dangote and other oil & gas industry experts."
-                  keywords="Nigerian oil gas, energy professionals, Aliko Dangote, petroleum industry, energy mentors"
-                >
-                  <OilGas />
-                </RouteWithSEO>
-              }
-            />
-            <Route
-              path="/industry/entertainment"
-              element={
-                <RouteWithSEO
-                  title="Entertainment Industry Professionals - NaijaPro Connect"
-                  description="Connect with Nigeria's entertainment leaders including Davido, Genevieve Nnaji, Mo Abudu and other creative industry experts."
-                  keywords="Nigerian entertainment, Nollywood, Afrobeats, Davido, Genevieve Nnaji, Mo Abudu, creative industry"
-                >
-                  <Entertainment />
-                </RouteWithSEO>
-              }
-            />
-            <Route
-              path="/blockchain"
-              element={
-                <RouteWithSEO
-                  title="Blockchain Network - NaijaPro Connect"
-                  description="Access decentralized professional networking with Web3 wallet integration, P2P connections, and blockchain-verified credentials."
-                  keywords="blockchain networking, Web3 professionals, decentralized identity, crypto connections, blockchain verification"
-                >
-                  <BlockchainNetwork />
-                </RouteWithSEO>
-              }
-            />
-            <Route
-              path="/admin/professionals"
-              element={
-                <RouteWithSEO
-                  title="Admin - Manage Professionals - NaijaPro Connect"
-                  description="Admin panel for managing professional profiles with mandatory image validation and verification requirements."
-                  keywords="admin, professional management, image validation, profile verification"
-                >
-                  <AdminProfessionals />
-                </RouteWithSEO>
-              }
-            />
-            <Route
-              path="/profile/:userId"
-              element={
-                <RouteWithSEO
-                  title="Professional Profile - NaijaPro Connect"
-                  description="View detailed professional profile, experience, education, and activities of Nigerian industry leaders."
-                  keywords="professional profile, Nigerian professionals, user profile, networking"
-                >
-                  <UserProfile />
-                </RouteWithSEO>
-              }
-            />
-            <Route
-              path="/discovery"
-              element={
-                <RouteWithSEO
-                  title="AI-Powered Talent Discovery - Talk About Nigeria"
-                  description="Discover Nigerian professionals and gifted individuals through advanced AI search. Find talents by skills, industry, location, and verified social profiles."
-                  keywords="talent discovery, AI search, Nigerian professionals, skill matching, social verification, talent search"
-                >
-                  <TalentDiscovery />
-                </RouteWithSEO>
-              }
-            />
-            <Route path="/news" element={<NewsPage />} />
-            <Route path="/community" element={<CommunityPage />} />
-            {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
-            <Route path="*" element={<NotFound />} />
-          </Routes>
-        </BrowserRouter>
-      </TooltipProvider>
-    </WalletProvider>
-  </QueryClientProvider>
+  <HelmetProvider>
+    <QueryClientProvider client={queryClient}>
+      <WalletProvider>
+        <TooltipProvider>
+          <Toaster />
+          <Sonner />
+          <BrowserRouter>
+            <Routes>
+              <Route
+                path="/"
+                element={
+                  <RouteWithSEO
+                    title="NaijaPro Connect - Nigeria's Premier Professional Network"
+                    description="Connect with Nigeria's top professionals across all industries. Discover verified talent, build networks, and collaborate with industry leaders like Tony Elumelu, Aliko Dangote, and Davido."
+                    keywords="Nigeria professionals, Tony Elumelu, Aliko Dangote, Davido, networking, banking finance, oil gas, entertainment, technology, professional network"
+                  >
+                    <Index />
+                  </RouteWithSEO>
+                }
+              />
+              <Route path="/professionals" element={<ProfessionalsPage />} />
+              <Route
+                path="/industry"
+                element={
+                  <RouteWithSEO
+                    title="Industry Hub - NaijaPro Connect"
+                    description="Explore all Nigerian industries and connect with professional leaders across Banking, Oil & Gas, Entertainment, Technology, and more."
+                    keywords="Nigerian industries, professional sectors, industry hub, business sectors Nigeria, professional networking"
+                  >
+                    <IndustryHub />
+                  </RouteWithSEO>
+                }
+              />
+              <Route
+                path="/industry/banking-finance"
+                element={
+                  <RouteWithSEO
+                    title="Banking & Finance Professionals - NaijaPro Connect"
+                    description="Connect with Nigeria's top banking and finance professionals including Tony Elumelu, Ngozi Okonjo-Iweala, and other industry leaders."
+                    keywords="Nigerian banking, finance professionals, Tony Elumelu, banking mentors, financial services Nigeria"
+                  >
+                    <BankingFinance />
+                  </RouteWithSEO>
+                }
+              />
+              <Route
+                path="/industry/oil-gas"
+                element={
+                  <RouteWithSEO
+                    title="Oil & Gas Professionals - NaijaPro Connect"
+                    description="Connect with Nigeria's energy sector leaders including Aliko Dangote and other oil & gas industry experts."
+                    keywords="Nigerian oil gas, energy professionals, Aliko Dangote, petroleum industry, energy mentors"
+                  >
+                    <OilGas />
+                  </RouteWithSEO>
+                }
+              />
+              <Route
+                path="/industry/entertainment"
+                element={
+                  <RouteWithSEO
+                    title="Entertainment Industry Professionals - NaijaPro Connect"
+                    description="Connect with Nigeria's entertainment leaders including Davido, Genevieve Nnaji, Mo Abudu and other creative industry experts."
+                    keywords="Nigerian entertainment, Nollywood, Afrobeats, Davido, Genevieve Nnaji, Mo Abudu, creative industry"
+                  >
+                    <Entertainment />
+                  </RouteWithSEO>
+                }
+              />
+              <Route
+                path="/blockchain"
+                element={
+                  <RouteWithSEO
+                    title="Blockchain Network - NaijaPro Connect"
+                    description="Access decentralized professional networking with Web3 wallet integration, P2P connections, and blockchain-verified credentials."
+                    keywords="blockchain networking, Web3 professionals, decentralized identity, crypto connections, blockchain verification"
+                  >
+                    <BlockchainNetwork />
+                  </RouteWithSEO>
+                }
+              />
+              <Route
+                path="/admin/professionals"
+                element={
+                  <RouteWithSEO
+                    title="Admin - Manage Professionals - NaijaPro Connect"
+                    description="Admin panel for managing professional profiles with mandatory image validation and verification requirements."
+                    keywords="admin, professional management, image validation, profile verification"
+                  >
+                    <AdminProfessionals />
+                  </RouteWithSEO>
+                }
+              />
+              <Route
+                path="/profile/:userId"
+                element={
+                  <RouteWithSEO
+                    title="Professional Profile - NaijaPro Connect"
+                    description="View detailed professional profile, experience, education, and activities of Nigerian industry leaders."
+                    keywords="professional profile, Nigerian professionals, user profile, networking"
+                  >
+                    <UserProfile />
+                  </RouteWithSEO>
+                }
+              />
+              <Route
+                path="/discovery"
+                element={
+                  <RouteWithSEO
+                    title="AI-Powered Talent Discovery - Talk About Nigeria"
+                    description="Discover Nigerian professionals and gifted individuals through advanced AI search. Find talents by skills, industry, location, and verified social profiles."
+                    keywords="talent discovery, AI search, Nigerian professionals, skill matching, social verification, talent search"
+                  >
+                    <TalentDiscovery />
+                  </RouteWithSEO>
+                }
+              />
+              <Route path="/news" element={<NewsPage />} />
+              <Route path="/community" element={<CommunityPage />} />
+              {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
+              <Route path="*" element={<NotFound />} />
+            </Routes>
+          </BrowserRouter>
+        </TooltipProvider>
+      </WalletProvider>
+    </QueryClientProvider>
+  </HelmetProvider>
 );
 
 createRoot(document.getElementById("root")!).render(<App />);
