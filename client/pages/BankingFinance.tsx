@@ -35,7 +35,7 @@ const mentors = [
     industry: "Banking & Finance",
     location: "Lagos, Nigeria",
     image:
-      "https://pbs.twimg.com/profile_images/1604081652468523008/SzQFJOL0_400x400.jpg",
+      "https://res.cloudinary.com/demo/image/upload/w_400,h_400,c_fill,g_face/v1/samples/people/boy-snow-hoodie.jpg",
     verified: true,
     connections: "10M+",
     expertise: [
@@ -57,7 +57,7 @@ const mentors = [
     industry: "Banking & Finance",
     location: "Geneva, Switzerland",
     image:
-      "https://pbs.twimg.com/profile_images/1357323048636436481/LkQfKEtv_400x400.jpg",
+      "https://res.cloudinary.com/demo/image/upload/w_400,h_400,c_fill,g_face/v1/samples/people/smiling-man.jpg",
     verified: true,
     connections: "2M+",
     expertise: [
@@ -79,7 +79,7 @@ const mentors = [
     industry: "Banking & Finance",
     location: "Lagos, Nigeria",
     image:
-      "https://pbs.twimg.com/profile_images/1354425999582773249/DJyHKcMD_400x400.jpg",
+      "https://res.cloudinary.com/demo/image/upload/w_400,h_400,c_fill,g_face/v1/samples/people/bicycle.jpg",
     verified: true,
     connections: "1.5M+",
     expertise: [
