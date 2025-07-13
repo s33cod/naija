@@ -20,6 +20,7 @@ import {
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import SEOHead from "@/components/layout/SEOHead";
+import AuthModal from "@/components/auth/AuthModal";
 import {
   Search,
   ChevronLeft,
@@ -159,6 +160,8 @@ const professionals = [
 export default function Index() {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [searchQuery, setSearchQuery] = useState("");
+  const [authModalOpen, setAuthModalOpen] = useState(false);
+  const [authMode, setAuthMode] = useState<"signin" | "join">("join");
 
   const nextSlide = () => {
     setCurrentSlide((prev) => (prev + 1) % heroSlides.length);
@@ -548,13 +551,33 @@ export default function Index() {
                             </DialogDescription>
                           </DialogHeader>
                           <div className="space-y-4 pt-4">
-                            <Button className="w-full bg-naija-green hover:bg-naija-green-dark">
+                            <Button
+                              className="w-full bg-naija-green hover:bg-naija-green-dark"
+                              onClick={() => {
+                                setAuthMode("join");
+                                setAuthModalOpen(true);
+                              }}
+                            >
                               Join with LinkedIn
                             </Button>
-                            <Button variant="outline" className="w-full">
+                            <Button
+                              variant="outline"
+                              className="w-full"
+                              onClick={() => {
+                                setAuthMode("join");
+                                setAuthModalOpen(true);
+                              }}
+                            >
                               Join with Google
                             </Button>
-                            <Button variant="outline" className="w-full">
+                            <Button
+                              variant="outline"
+                              className="w-full"
+                              onClick={() => {
+                                setAuthMode("join");
+                                setAuthModalOpen(true);
+                              }}
+                            >
                               Create Account
                             </Button>
                           </div>
@@ -725,6 +748,10 @@ export default function Index() {
               size="lg"
               variant="outline"
               className="border-white text-white hover:bg-white hover:text-naija-green"
+              onClick={() => {
+                setAuthMode("join");
+                setAuthModalOpen(true);
+              }}
             >
               Join as Professional
             </Button>
@@ -733,6 +760,12 @@ export default function Index() {
       </main>
 
       <Footer />
+
+      <AuthModal
+        isOpen={authModalOpen}
+        onClose={() => setAuthModalOpen(false)}
+        initialMode={authMode}
+      />
     </div>
   );
 }
