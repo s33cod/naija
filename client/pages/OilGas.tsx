@@ -27,7 +27,7 @@ const mentors = [
     industry: "Oil & Gas",
     location: "Lagos, Nigeria",
     image:
-      "https://pbs.twimg.com/profile_images/1153616477684973569/x7wEPOEL_400x400.jpg",
+      "https://res.cloudinary.com/demo/image/upload/w_400,h_400,c_fill,g_face/v1/samples/people/kitchen-bar.jpg",
     verified: true,
     connections: "5M+",
     expertise: [
@@ -49,7 +49,7 @@ const mentors = [
     industry: "Oil & Gas",
     location: "Abuja, Nigeria",
     image:
-      "https://pbs.twimg.com/profile_images/925711649777885184/SMQHP7xD_400x400.jpg",
+      "https://res.cloudinary.com/demo/image/upload/w_400,h_400,c_fill,g_face/v1/samples/people/bike.jpg",
     verified: true,
     connections: "800K+",
     expertise: [
@@ -71,7 +71,7 @@ const mentors = [
     industry: "Oil & Gas",
     location: "Lagos, Nigeria",
     image:
-      "https://www.seplatenergy.com/wp-content/uploads/2019/08/Roger-Brown-1.jpg",
+      "https://res.cloudinary.com/demo/image/upload/w_400,h_400,c_fill,g_face/v1/samples/people/mid-age-man.jpg",
     verified: true,
     connections: "600K+",
     expertise: [
