@@ -284,6 +284,18 @@ const App = () => (
                 </RouteWithSEO>
               }
             />
+            <Route
+              path="/discovery"
+              element={
+                <RouteWithSEO
+                  title="AI-Powered Talent Discovery - Talk About Nigeria"
+                  description="Discover Nigerian professionals and gifted individuals through advanced AI search. Find talents by skills, industry, location, and verified social profiles."
+                  keywords="talent discovery, AI search, Nigerian professionals, skill matching, social verification, talent search"
+                >
+                  <TalentDiscovery />
+                </RouteWithSEO>
+              }
+            />
             <Route path="/news" element={<NewsPage />} />
             <Route path="/community" element={<CommunityPage />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
