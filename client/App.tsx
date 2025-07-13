@@ -12,6 +12,7 @@ import NotFound from "./pages/NotFound";
 import BankingFinance from "./pages/BankingFinance";
 import OilGas from "./pages/OilGas";
 import Entertainment from "./pages/Entertainment";
+import Technology from "./pages/Technology";
 import IndustryHub from "./pages/IndustryHub";
 import BlockchainNetwork from "./pages/BlockchainNetwork";
 import AdminProfessionals from "./pages/AdminProfessionals";
@@ -242,11 +243,23 @@ const App = () => (
                 path="/industry/entertainment"
                 element={
                   <RouteWithSEO
-                    title="Entertainment Industry Professionals - NaijaPro Connect"
+                    title="Entertainment Industry Professionals - Talk About Nigeria"
                     description="Connect with Nigeria's entertainment leaders including Davido, Genevieve Nnaji, Mo Abudu and other creative industry experts."
                     keywords="Nigerian entertainment, Nollywood, Afrobeats, Davido, Genevieve Nnaji, Mo Abudu, creative industry"
                   >
                     <Entertainment />
+                  </RouteWithSEO>
+                }
+              />
+              <Route
+                path="/industry/technology"
+                element={
+                  <RouteWithSEO
+                    title="Technology Professionals - Nigerian Tech Leaders"
+                    description="Connect with Nigeria's leading technology professionals including Paystack founders, fintech innovators, and software engineers shaping Africa's digital future."
+                    keywords="Nigerian tech professionals, fintech Nigeria, software engineers, tech entrepreneurs, Paystack, Flutterwave"
+                  >
+                    <Technology />
                   </RouteWithSEO>
                 }
               />
