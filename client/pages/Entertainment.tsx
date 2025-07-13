@@ -239,7 +239,14 @@ export default function Entertainment() {
                     )}
                   </div>
                   <div className="flex-1">
-                    <CardTitle className="text-lg">{mentor.name}</CardTitle>
+                    <CardTitle className="text-lg">
+                      <a
+                        href={`/profile/${mentor.name.toLowerCase().replace(/ /g, "-")}`}
+                        className="hover:text-naija-green transition-colors cursor-pointer"
+                      >
+                        {mentor.name}
+                      </a>
+                    </CardTitle>
                     <CardDescription className="text-sm">
                       {mentor.title}
                     </CardDescription>
