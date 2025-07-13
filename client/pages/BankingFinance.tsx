@@ -250,7 +250,8 @@ export default function BankingFinance() {
                             `Image failed to load for ${mentor.name}, showing fallback`,
                           );
                           e.currentTarget.style.display = "none";
-                          const fallback = e.currentTarget.nextElementSibling;
+                          const fallback = e.currentTarget
+                            .nextElementSibling as HTMLElement;
                           if (fallback) fallback.style.display = "flex";
                         }}
                       />
