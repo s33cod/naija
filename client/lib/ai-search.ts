@@ -34,6 +34,7 @@ export interface TalentProfile {
     twitter?: string;
     youtube?: string;
     portfolio?: string;
+    spotify?: string;
   };
 
   // AI-Enhanced Attributes
