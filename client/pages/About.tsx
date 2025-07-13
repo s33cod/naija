@@ -104,20 +104,49 @@ export default function About() {
     <div className="min-h-screen bg-gray-50">
       <Header />
 
-      <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        {/* Hero Section */}
-        <div className="text-center mb-16">
-          <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
-            About Talk About Nigeria
+      {/* Hero Section */}
+      <section
+        className="relative bg-gradient-to-r from-naija-green/90 to-naija-green-light/90 text-white py-20 overflow-hidden"
+        style={{
+          backgroundImage: `url('https://images.pexels.com/photos/3228766/pexels-photo-3228766.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1080')`,
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          backgroundAttachment: "fixed",
+        }}
+      >
+        <div className="absolute inset-0 bg-gradient-to-r from-naija-green/85 to-naija-green-light/85"></div>
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <div className="inline-flex items-center gap-2 bg-white/20 backdrop-blur-sm text-white px-4 py-2 rounded-full text-sm font-medium mb-6">
+            🇳🇬 About Talk About Nigeria
+          </div>
+          <h1 className="text-4xl md:text-6xl font-bold mb-6 drop-shadow-lg">
+            Celebrating Nigerian
+            <span className="block text-yellow-300">Excellence</span>
           </h1>
-          <p className="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
+          <p className="text-xl md:text-2xl mb-8 opacity-95 max-w-4xl mx-auto leading-relaxed drop-shadow-md">
             We are Nigeria's premier platform connecting exceptional
             professionals, creatives, and innovators. Our mission is to showcase
             the incredible talent that defines modern Nigeria and foster
             meaningful connections that drive success across all industries.
           </p>
+          <div className="flex flex-col sm:flex-row justify-center gap-4">
+            <Badge
+              variant="secondary"
+              className="text-lg px-6 py-3 bg-white/90 text-naija-green backdrop-blur-sm"
+            >
+              🌟 Premier Platform
+            </Badge>
+            <Badge
+              variant="outline"
+              className="text-lg px-6 py-3 border-white text-white backdrop-blur-sm"
+            >
+              🇳🇬 Proudly Nigerian
+            </Badge>
+          </div>
         </div>
+      </section>
 
+      <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         {/* Mission Statement */}
         <div className="bg-white rounded-2xl p-8 md:p-12 mb-16 shadow-sm">
           <div className="grid md:grid-cols-2 gap-12 items-center">
