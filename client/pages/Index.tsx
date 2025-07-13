@@ -322,8 +322,8 @@ export default function Index() {
                                 `Image failed to load for ${professional.name}, showing fallback`,
                               );
                               e.currentTarget.style.display = "none";
-                              const fallback =
-                                e.currentTarget.nextElementSibling;
+                              const fallback = e.currentTarget
+                                .nextElementSibling as HTMLElement;
                               if (fallback) fallback.style.display = "flex";
                             }}
                           />
