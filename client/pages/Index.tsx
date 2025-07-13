@@ -91,7 +91,7 @@ const professionals = [
     industry: "Banking & Finance",
     location: "Lagos, Nigeria",
     image:
-      "https://pbs.twimg.com/profile_images/1604081652468523008/SzQFJOL0_400x400.jpg",
+      "https://images.unsplash.com/photo-1560250097-0b93528c311a?w=400&h=400&fit=crop&crop=face&auto=format",
     verified: true,
     connections: "10M+",
     expertise: ["Investment Banking", "Entrepreneurship", "Philanthropy"],
@@ -105,7 +105,7 @@ const professionals = [
     industry: "Oil & Gas",
     location: "Lagos, Nigeria",
     image:
-      "https://pbs.twimg.com/profile_images/1153616477684973569/x7wEPOEL_400x400.jpg",
+      "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop&crop=face&auto=format",
     verified: true,
     connections: "5M+",
     expertise: ["Oil & Gas", "Manufacturing", "Infrastructure"],
@@ -119,7 +119,7 @@ const professionals = [
     industry: "Entertainment",
     location: "Lagos, Nigeria",
     image:
-      "https://pbs.twimg.com/profile_images/1735413305191063552/fKYHAaYX_400x400.jpg",
+      "https://images.unsplash.com/photo-1493863641943-9b68992a8d07?w=400&h=400&fit=crop&crop=face&auto=format",
     verified: true,
     connections: "30M+",
     expertise: ["Music Production", "Entertainment", "Brand Management"],
