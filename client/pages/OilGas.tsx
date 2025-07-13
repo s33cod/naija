@@ -315,20 +315,7 @@ export default function OilGas() {
         </div>
       </main>
 
-      {/* Footer */}
-      <footer className="bg-gray-900 text-white py-12">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center">
-            <div className="flex items-center justify-center space-x-2 mb-4">
-              <div className="w-8 h-8 bg-gradient-to-r from-naija-green to-naija-green-light rounded-full"></div>
-              <span className="text-xl font-bold">NaijaPro Connect</span>
-            </div>
-            <p className="text-gray-400">
-              Oil & Gas Hub - Connecting Nigeria's Energy Leaders
-            </p>
-          </div>
-        </div>
-      </footer>
+      <Footer />
     </div>
   );
 }
