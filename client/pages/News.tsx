@@ -37,6 +37,11 @@ import {
   ChevronRight,
 } from "lucide-react";
 import { LiveNewsTimestamp } from "@/components/ui/live-timestamp";
+import {
+  BannerAd,
+  SidebarAd,
+  InArticleAd,
+} from "@/components/ads/GoogleAdSense";
 
 interface NewsArticle {
   id: string;
