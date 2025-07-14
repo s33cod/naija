@@ -55,7 +55,8 @@ function SEOHead({
   useEffect(() => {
     // Update document title
     document.title =
-      title || "NaijaPro Connect - Nigeria's Premier Professional Network";
+      title ||
+      "TalkAboutNigeria - Connect with Nigeria's Leading Professionals & Businesses";
 
     // Update meta description
     let metaDescription = document.querySelector('meta[name="description"]');
@@ -67,7 +68,7 @@ function SEOHead({
     metaDescription.setAttribute(
       "content",
       description ||
-        "Connect with Nigeria's top professionals across all industries. Discover verified talent, build networks, and collaborate with industry leaders.",
+        "Discover and connect with Nigeria's leading professionals, entrepreneurs, and businesses across all industries. Showcase your skills, find mentors, build networks, and grow your career with verified Nigerian talent.",
     );
 
     // Update meta keywords
@@ -80,7 +81,7 @@ function SEOHead({
     metaKeywords.setAttribute(
       "content",
       keywords ||
-        "Nigeria professionals, networking, industry experts, career development, business connections, African talent, professional network, LinkedIn Nigeria",
+        "Nigeria professionals, Nigerian businesses, professional networking, career development, industry experts, African talent, Lagos professionals, Abuja businesses, Nigerian entrepreneurs, tech professionals Nigeria, banking finance Nigeria, oil gas Nigeria, entertainment Nigeria, healthcare professionals, agricultural experts, educational consultants, construction professionals, manufacturing experts, transportation logistics, fashion designers Nigeria, Nollywood, Afrobeats, fintech Nigeria, startup ecosystem, business mentors Nigeria, professional network Africa",
     );
 
     // Add Open Graph tags
@@ -88,16 +89,17 @@ function SEOHead({
       {
         property: "og:title",
         content:
-          title || "NaijaPro Connect - Nigeria's Premier Professional Network",
+          title ||
+          "TalkAboutNigeria - Connect with Nigeria's Leading Professionals & Businesses",
       },
       {
         property: "og:description",
         content:
           description ||
-          "Connect with Nigeria's top professionals across all industries.",
+          "Discover verified Nigerian professionals, entrepreneurs, and businesses across all industries. Build networks, find mentors, and showcase your skills.",
       },
       { property: "og:type", content: "website" },
-      { property: "og:site_name", content: "NaijaPro Connect" },
+      { property: "og:site_name", content: "TalkAboutNigeria" },
     ];
 
     ogTags.forEach((tag) => {
@@ -138,7 +140,7 @@ function RouteWithSEO({
 function NewsPage() {
   return (
     <RouteWithSEO
-      title="Latest Nigerian News - NaijaPro Connect"
+      title="Latest Nigerian News - TalkAboutNigeria"
       description="Stay updated with the latest news from Nigeria's business, technology, and professional sectors."
       keywords="Nigeria news, business news Nigeria, technology news, professional updates"
     >
@@ -160,7 +162,7 @@ function NewsPage() {
 function CommunityPage() {
   return (
     <RouteWithSEO
-      title="Professional Community - NaijaPro Connect"
+      title="Professional Community - TalkAboutNigeria"
       description="Join our community of verified Nigerian professionals for peer-to-peer networking and collaboration."
       keywords="professional community, Nigerian professionals, networking, peer-to-peer, collaboration"
     >
@@ -182,7 +184,7 @@ function CommunityPage() {
 function ProfessionalsPage() {
   return (
     <RouteWithSEO
-      title="Browse Professionals - NaijaPro Connect"
+      title="Browse Professionals - TalkAboutNigeria"
       description="Discover and connect with verified professionals across all Nigerian industries."
       keywords="browse professionals, Nigerian experts, industry professionals, career networking"
     >
@@ -216,8 +218,8 @@ const App = () => (
                 path="/"
                 element={
                   <RouteWithSEO
-                    title="NaijaPro Connect - Nigeria's Premier Professional Network"
-                    description="Connect with Nigeria's top professionals across all industries. Discover verified talent, build networks, and collaborate with industry leaders like Tony Elumelu, Aliko Dangote, and Davido."
+                    title="TalkAboutNigeria - Connect with Nigeria's Leading Professionals & Businesses"
+                    description="Discover and connect with Nigeria's leading professionals, entrepreneurs, and businesses across all industries. Showcase your skills, find mentors, build networks, and grow your career with verified Nigerian talent including industry leaders like Tony Elumelu, Aliko Dangote, and Davido."
                     keywords="Nigeria professionals, Tony Elumelu, Aliko Dangote, Davido, networking, banking finance, oil gas, entertainment, technology, professional network"
                   >
                     <Index />
@@ -229,7 +231,7 @@ const App = () => (
                 path="/industry"
                 element={
                   <RouteWithSEO
-                    title="Industry Hub - NaijaPro Connect"
+                    title="Industry Hub - TalkAboutNigeria"
                     description="Explore all Nigerian industries and connect with professional leaders across Banking, Oil & Gas, Entertainment, Technology, and more."
                     keywords="Nigerian industries, professional sectors, industry hub, business sectors Nigeria, professional networking"
                   >
@@ -241,7 +243,7 @@ const App = () => (
                 path="/industry/banking-finance"
                 element={
                   <RouteWithSEO
-                    title="Banking & Finance Professionals - NaijaPro Connect"
+                    title="Banking & Finance Professionals - TalkAboutNigeria"
                     description="Connect with Nigeria's top banking and finance professionals including Tony Elumelu, Ngozi Okonjo-Iweala, and other industry leaders."
                     keywords="Nigerian banking, finance professionals, Tony Elumelu, banking mentors, financial services Nigeria"
                   >
@@ -253,7 +255,7 @@ const App = () => (
                 path="/industry/oil-gas"
                 element={
                   <RouteWithSEO
-                    title="Oil & Gas Professionals - NaijaPro Connect"
+                    title="Oil & Gas Professionals - TalkAboutNigeria"
                     description="Connect with Nigeria's energy sector leaders including Aliko Dangote and other oil & gas industry experts."
                     keywords="Nigerian oil gas, energy professionals, Aliko Dangote, petroleum industry, energy mentors"
                   >
@@ -289,7 +291,7 @@ const App = () => (
                 path="/blockchain"
                 element={
                   <RouteWithSEO
-                    title="Blockchain Network - NaijaPro Connect"
+                    title="Blockchain Network - TalkAboutNigeria"
                     description="Access decentralized professional networking with Web3 wallet integration, P2P connections, and blockchain-verified credentials."
                     keywords="blockchain networking, Web3 professionals, decentralized identity, crypto connections, blockchain verification"
                   >
@@ -301,7 +303,7 @@ const App = () => (
                 path="/admin/professionals"
                 element={
                   <RouteWithSEO
-                    title="Admin - Manage Professionals - NaijaPro Connect"
+                    title="Admin - Manage Professionals - TalkAboutNigeria"
                     description="Admin panel for managing professional profiles with mandatory image validation and verification requirements."
                     keywords="admin, professional management, image validation, profile verification"
                   >
@@ -313,7 +315,7 @@ const App = () => (
                 path="/profile/:userId"
                 element={
                   <RouteWithSEO
-                    title="Professional Profile - NaijaPro Connect"
+                    title="Professional Profile - TalkAboutNigeria"
                     description="View detailed professional profile, experience, education, and activities of Nigerian industry leaders."
                     keywords="professional profile, Nigerian professionals, user profile, networking"
                   >
