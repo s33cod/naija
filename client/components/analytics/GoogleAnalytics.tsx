@@ -73,11 +73,15 @@ export function GoogleAnalytics({ measurementId }: GoogleAnalyticsProps) {
 
 // Track page views
 export const trackPageView = (url: string, title: string) => {
-  if (typeof window !== "undefined" && window.gtag) {
-    window.gtag("config", "GA_MEASUREMENT_ID", {
-      page_title: title,
-      page_location: url,
-    });
+  try {
+    if (typeof window !== "undefined" && window.gtag) {
+      window.gtag("config", GA_CONFIG.measurementId, {
+        page_title: title,
+        page_location: url,
+      });
+    }
+  } catch (error) {
+    console.warn("Google Analytics tracking failed:", error);
   }
 };
 
@@ -88,12 +92,16 @@ export const trackEvent = (
   label?: string,
   value?: number,
 ) => {
-  if (typeof window !== "undefined" && window.gtag) {
-    window.gtag("event", action, {
-      event_category: category,
-      event_label: label,
-      value: value,
-    });
+  try {
+    if (typeof window !== "undefined" && window.gtag) {
+      window.gtag("event", action, {
+        event_category: category,
+        event_label: label,
+        value: value,
+      });
+    }
+  } catch (error) {
+    console.warn("Google Analytics event tracking failed:", error);
   }
 };
 
@@ -102,11 +110,15 @@ export const trackEngagement = (
   engagementType: string,
   details?: Record<string, any>,
 ) => {
-  if (typeof window !== "undefined" && window.gtag) {
-    window.gtag("event", "engagement", {
-      engagement_type: engagementType,
-      ...details,
-    });
+  try {
+    if (typeof window !== "undefined" && window.gtag) {
+      window.gtag("event", "engagement", {
+        engagement_type: engagementType,
+        ...details,
+      });
+    }
+  } catch (error) {
+    console.warn("Google Analytics engagement tracking failed:", error);
   }
 };
 
