@@ -34,6 +34,11 @@ import Manufacturing from "./pages/Manufacturing";
 import Transportation from "./pages/Transportation";
 import News from "./pages/News";
 import { WalletProvider } from "./components/blockchain/WalletAuth";
+import {
+  GoogleAnalytics,
+  GA_CONFIG,
+} from "./components/analytics/GoogleAnalytics";
+import { AdSenseScript, ADSENSE_CONFIG } from "./components/ads/GoogleAdSense";
 
 const queryClient = new QueryClient();
 
