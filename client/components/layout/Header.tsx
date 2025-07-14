@@ -162,6 +162,15 @@ export default function Header() {
           </nav>
 
           <div className="flex items-center space-x-3">
+            {/* Live Timestamp - Hidden on mobile */}
+            <div className="hidden xl:block">
+              <LiveTimestamp
+                className="text-xs"
+                showSeconds={false}
+                prefix="🇳🇬"
+              />
+            </div>
+
             {/* Mobile menu button */}
             <Button
               variant="outline"
