@@ -141,12 +141,22 @@ export function MobileAd({ className = "" }: { className?: string }) {
 
 // AdSense initialization script for the entire app
 export function AdSenseScript({ clientId }: { clientId: string }) {
+  const isValidClientId = clientId && !clientId.includes("XXXXXXXXX");
+
   useEffect(() => {
-    // Load AdSense script
+    if (!isValidClientId) {
+      console.log("AdSense: Using placeholder client ID, skipping script load");
+      return; // Don't load script with invalid client ID
+    }
+
+    // Load AdSense script only with valid client ID
     const script = document.createElement("script");
     script.async = true;
     script.src = `https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${clientId}`;
     script.crossOrigin = "anonymous";
+    script.onerror = () => {
+      console.error("Failed to load AdSense script");
+    };
     document.head.appendChild(script);
 
     return () => {
@@ -155,7 +165,7 @@ export function AdSenseScript({ clientId }: { clientId: string }) {
         script.parentNode.removeChild(script);
       }
     };
-  }, [clientId]);
+  }, [clientId, isValidClientId]);
 
   return null;
 }
