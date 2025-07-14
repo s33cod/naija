@@ -206,6 +206,8 @@ const App = () => (
     <QueryClientProvider client={queryClient}>
       <WalletProvider>
         <TooltipProvider>
+          <GoogleAnalytics measurementId={GA_CONFIG.measurementId} />
+          <AdSenseScript clientId={ADSENSE_CONFIG.clientId} />
           <Toaster />
           <Sonner />
           <BrowserRouter>
