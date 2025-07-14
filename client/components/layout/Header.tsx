@@ -18,6 +18,7 @@ import {
   Menu,
   X,
 } from "lucide-react";
+import { LiveTimestamp } from "@/components/ui/live-timestamp";
 
 const industries = [
   { name: "Banking & Finance", path: "/industry/banking-finance", icon: "🏦" },
