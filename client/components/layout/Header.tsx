@@ -85,18 +85,10 @@ export default function Header() {
                 className="flex items-center hover:opacity-90 transition-opacity"
               >
                 <img
-                  src="https://cdn.builder.io/api/v1/image/assets%2Ff84bf105d9db46e28537df3ccb1c17d3%2Fa7f66b57f77c4d2b94f4d218bcc3220d?format=webp&width=100"
+                  src="https://cdn.builder.io/api/v1/image/assets%2Ff84bf105d9db46e28537df3ccb1c17d3%2F00da386e3951423ca8f5efbdbe71f46e?format=webp&width=800"
                   alt="TalkAboutNigeria"
-                  className="h-10 w-auto mr-2"
+                  className="h-12 w-auto"
                 />
-                <div className="flex flex-col">
-                  <span className="text-lg font-bold text-gray-900">
-                    TalkAboutNigeria
-                  </span>
-                  <span className="text-xs text-gray-500 -mt-1">
-                    Professional Network
-                  </span>
-                </div>
               </a>
             </div>
           </div>
