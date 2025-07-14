@@ -85,10 +85,18 @@ export default function Header() {
                 className="flex items-center hover:opacity-90 transition-opacity"
               >
                 <img
-                  src="https://cdn.builder.io/api/v1/image/assets%2Ff84bf105d9db46e28537df3ccb1c17d3%2Fc8f09261fb5441098f1e36071edf4f5a?format=webp&width=800"
-                  alt="Talk About Nigeria"
-                  className="h-10 w-auto"
+                  src="https://cdn.builder.io/api/v1/image/assets%2Ff84bf105d9db46e28537df3ccb1c17d3%2Fa7f66b57f77c4d2b94f4d218bcc3220d?format=webp&width=100"
+                  alt="TalkAboutNigeria"
+                  className="h-10 w-auto mr-2"
                 />
+                <div className="flex flex-col">
+                  <span className="text-lg font-bold text-gray-900">
+                    TalkAboutNigeria
+                  </span>
+                  <span className="text-xs text-gray-500 -mt-1">
+                    Professional Network
+                  </span>
+                </div>
               </a>
             </div>
           </div>
@@ -158,7 +166,7 @@ export default function Header() {
 
             <a href="/about" className={navLinkClasses("/about")}>
               <Info className="w-4 h-4" />
-              About
+              About Nigeria
             </a>
           </nav>
 
@@ -234,7 +242,7 @@ export default function Header() {
               </a>
               <a href="/about" className={mobileNavLinkClasses("/about")}>
                 <Info className="w-5 h-5" />
-                About Nigeria
+                About TAN
               </a>
 
               {/* Featured Industries in Mobile */}
