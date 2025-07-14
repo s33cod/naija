@@ -782,6 +782,8 @@ export default function News() {
 
           {/* Sidebar */}
           <div className="space-y-8">
+            {/* Advertisement */}
+            <SidebarAd />
             {/* News Sources */}
             <Card className="p-6">
               <h3 className="font-bold text-lg mb-4 flex items-center gap-2">
