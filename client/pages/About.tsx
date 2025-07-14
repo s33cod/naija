@@ -17,32 +17,32 @@ import {
 
 const teamMembers = [
   {
-    name: "Adunni Soyinka",
+    name: "Charles O. Darling",
     role: "Founder & CEO",
     image:
-      "https://images.unsplash.com/photo-1494790108755-2616b612b547?w=200&h=200&fit=crop",
-    bio: "Former tech executive with 15+ years building platforms that connect African talent globally.",
+      "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=200&h=200&fit=crop",
+    bio: "Visionary entrepreneur and tech leader dedicated to showcasing Nigerian excellence and connecting talent globally. Leading the mission to celebrate and empower Nigerian professionals worldwide.",
   },
   {
-    name: "Kemi Adebayo",
-    role: "Head of Engineering",
+    name: "Toks Banjoko",
+    role: "Lead Collaborator & Strategy",
+    image:
+      "https://images.unsplash.com/photo-1494790108755-2616b612b547?w=200&h=200&fit=crop",
+    bio: "Strategic advisor and business development expert with extensive experience in Nigerian market dynamics and professional networking.",
+  },
+  {
+    name: "Daniel Idowu",
+    role: "Technical Collaborator",
     image:
       "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=200&h=200&fit=crop",
-    bio: "Senior software engineer specializing in AI-powered talent discovery and verification systems.",
+    bio: "Full-stack developer and technology innovator specializing in scalable platforms and AI-powered talent discovery systems.",
   },
   {
-    name: "Tunde Okoro",
-    role: "Head of Community",
-    image:
-      "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=200&h=200&fit=crop",
-    bio: "Community builder passionate about fostering meaningful professional connections across Nigeria.",
-  },
-  {
-    name: "Folake Adamu",
-    role: "Head of Partnerships",
+    name: "Demola Adesina",
+    role: "Content & Community Collaborator",
     image:
       "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=200&h=200&fit=crop",
-    bio: "Strategic partnerships expert with deep connections across Nigerian industries and diaspora networks.",
+    bio: "Content strategist and community engagement specialist focused on amplifying Nigerian stories and building meaningful professional connections.",
   },
 ];
 
