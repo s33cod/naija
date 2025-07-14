@@ -12,11 +12,24 @@ interface GoogleAnalyticsProps {
 }
 
 export function GoogleAnalytics({ measurementId }: GoogleAnalyticsProps) {
+  const isValidMeasurementId =
+    measurementId && !measurementId.includes("XXXXXXXXXX");
+
   useEffect(() => {
+    if (!isValidMeasurementId) {
+      console.log(
+        "Google Analytics: Using placeholder measurement ID, skipping initialization",
+      );
+      return; // Don't initialize GA with invalid ID
+    }
+
     // Load Google Analytics script
     const script1 = document.createElement("script");
     script1.async = true;
     script1.src = `https://www.googletagmanager.com/gtag/js?id=${measurementId}`;
+    script1.onerror = () => {
+      console.error("Failed to load Google Analytics script");
+    };
     document.head.appendChild(script1);
 
     // Initialize Google Analytics
@@ -42,10 +55,18 @@ export function GoogleAnalytics({ measurementId }: GoogleAnalyticsProps) {
 
     return () => {
       // Cleanup on unmount
-      document.head.removeChild(script1);
-      document.head.removeChild(script2);
+      try {
+        if (script1.parentNode) {
+          script1.parentNode.removeChild(script1);
+        }
+        if (script2.parentNode) {
+          script2.parentNode.removeChild(script2);
+        }
+      } catch (error) {
+        console.error("Error cleaning up Google Analytics scripts:", error);
+      }
     };
-  }, [measurementId]);
+  }, [measurementId, isValidMeasurementId]);
 
   return null;
 }
