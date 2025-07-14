@@ -356,6 +356,18 @@ const App = () => (
                 path="/industry/transportation"
                 element={<Transportation />}
               />
+              <Route
+                path="/industry/fashion-design"
+                element={
+                  <RouteWithSEO
+                    title="Fashion & Design Professionals - TalkAboutNigeria"
+                    description="Connect with Nigeria's leading fashion designers, stylists, and creative professionals including Mai Atafo, Deola Sagoe, Lisa Folawiyo, and other industry innovators."
+                    keywords="Nigerian fashion designers, African fashion, fashion industry Nigeria, creative professionals, fashion stylists, Lagos fashion, contemporary African fashion"
+                  >
+                    <FashionDesign />
+                  </RouteWithSEO>
+                }
+              />
               <Route path="/news" element={<News />} />
               <Route path="/community" element={<CommunityPage />} />
               {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
