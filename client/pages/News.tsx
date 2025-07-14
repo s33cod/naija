@@ -36,6 +36,7 @@ import {
   Filter,
   ChevronRight,
 } from "lucide-react";
+import { LiveNewsTimestamp } from "@/components/ui/live-timestamp";
 
 interface NewsArticle {
   id: string;
