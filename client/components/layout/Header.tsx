@@ -31,6 +31,7 @@ const industries = [
   { name: "Construction", path: "/industry/construction", icon: "🏗️" },
   { name: "Manufacturing", path: "/industry/manufacturing", icon: "🏭" },
   { name: "Transportation", path: "/industry/transportation", icon: "🚛" },
+  { name: "Fashion & Design", path: "/industry/fashion-design", icon: "👗" },
 ];
 
 export default function Header() {
