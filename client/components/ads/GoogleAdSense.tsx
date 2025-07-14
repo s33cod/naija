@@ -23,7 +23,15 @@ export function GoogleAdSense({
   style = { display: "block" },
   className = "",
 }: GoogleAdSenseProps) {
+  // Don't render if using placeholder IDs
+  const isValidAdClient = adClient && !adClient.includes("XXXXXXXXX");
+  const isValidAdSlot = adSlot && !adSlot.includes("XXXXXXXXX");
+
   useEffect(() => {
+    if (!isValidAdClient || !isValidAdSlot) {
+      return; // Don't initialize AdSense with invalid IDs
+    }
+
     try {
       // Initialize AdSense if not already loaded
       if (typeof window !== "undefined") {
@@ -33,7 +41,23 @@ export function GoogleAdSense({
     } catch (error) {
       console.error("AdSense error:", error);
     }
-  }, []);
+  }, [isValidAdClient, isValidAdSlot]);
+
+  // Show placeholder in development when using invalid IDs
+  if (!isValidAdClient || !isValidAdSlot) {
+    return (
+      <div
+        className={`adsense-placeholder border-2 border-dashed border-gray-300 bg-gray-50 p-4 text-center ${className}`}
+      >
+        <div className="text-gray-500 text-sm">
+          <div className="mb-2">📢 Advertisement Space</div>
+          <div className="text-xs">
+            AdSense will appear here with valid client ID
+          </div>
+        </div>
+      </div>
+    );
+  }
 
   return (
     <div className={`adsense-container ${className}`}>
