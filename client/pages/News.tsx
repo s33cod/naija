@@ -477,6 +477,9 @@ export default function News() {
       >
         <div className="absolute inset-0 bg-gradient-to-r from-red-600/85 to-red-800/85"></div>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <div className="flex justify-center mb-4">
+            <LiveNewsTimestamp />
+          </div>
           <div className="inline-flex items-center gap-2 bg-white/20 backdrop-blur-sm text-white px-4 py-2 rounded-full text-sm font-medium mb-6">
             <Newspaper className="w-4 h-4" />
             Latest Nigerian News
